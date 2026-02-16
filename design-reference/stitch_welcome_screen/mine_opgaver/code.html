@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html lang="da"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mine Opgaver - Worker Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1a355b",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#13181f",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-tab {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header -->
+<header class="sticky top-0 z-10 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10 px-4 py-4">
+<div class="max-w-md mx-auto flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-primary/10 flex items-center justify-center overflow-hidden border border-primary/5">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="Worker profile avatar with friendly face" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJsud0CbieoVHbCnkQ37heEuuVHJgsw3iK3YEJKNP34FMbjz7z79_OPTD8-9eGbKDaaPDlKnREh3jHzDdSTw5RP1miPIGJ4M8g-DAmTdmEAlJIW6AOiPcobVnm3O_7D_IWBH9JEwuPHOM7fVuFfy1v-YhZRhRfQ-ECQ-W3DBtfsGHOtZOvjnBKtkIhjMnSJN7hHFI3shZd8QH4k1vPZfvt7KGcDIZ3uMEfOzanq6Ve7OVqPiI9gtCjbrT0NdEl3e9hBCizXPSKDHs"/>
+</div>
+<div>
+<h1 class="text-lg font-bold leading-tight tracking-tight text-primary">Mine Opgaver</h1>
+<p class="text-xs text-primary/60 font-medium">Velkommen tilbage, Erik</p>
+</div>
+</div>
+<button class="relative p-2 text-primary hover:bg-primary/5 rounded-full transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+</span>
+</button>
+</div>
+</header>
+<main class="flex-1 max-w-md mx-auto w-full p-4 space-y-6">
+<!-- Segment Control -->
+<div class="flex p-1 bg-primary/5 dark:bg-primary/20 rounded-xl">
+<button class="flex-1 flex items-center justify-center gap-2 py-2.5 text-sm font-semibold rounded-lg bg-white dark:bg-primary shadow-sm text-primary dark:text-white transition-all">
+                Aktive
+            </button>
+<button class="flex-1 flex items-center justify-center gap-2 py-2.5 text-sm font-medium text-primary/60 dark:text-primary/40 rounded-lg hover:bg-primary/5 transition-all">
+                Afsluttede
+            </button>
+</div>
+<!-- Task List Section -->
+<div class="space-y-4">
+<div class="flex items-center justify-between px-1">
+<h2 class="text-sm font-bold uppercase tracking-wider text-primary/50">I gang nu</h2>
+<span class="text-xs font-semibold bg-primary/10 text-primary px-2 py-1 rounded-full">1 Aktiv</span>
+</div>
+<!-- Task Card -->
+<div class="bg-white dark:bg-slate-900 rounded-xl shadow-[0_4px_20px_rgba(26,53,91,0.08)] border border-primary/5 overflow-hidden">
+<div class="p-5 space-y-4">
+<!-- Card Header -->
+<div class="flex items-start justify-between">
+<div class="flex gap-4">
+<div class="size-12 rounded-xl bg-primary/5 p-2 flex items-center justify-center">
+<img alt="Socialdemokratiet Logo" class="w-full h-auto object-contain" data-alt="Red rose logo of the Social Democrats" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAV1t8iAD_JN-iwjaDJWGzOvnIgFlYYywY8-ydrCRHrft4ukd5XFJpcSAwA2TZbSxnZLUffIRNnHefZR4WTvNtem2K4kAaHmSzmxai7Wk5BxGPOHHBGLWjthLaAwAwdtuPyGEVu76E5k2-BQ000GAWY7KOOMc0Fh7EC329ZYZzG1C8cKIwTz8Gv7XEN-8zZVlbdRDzcz_US_gPvW7RHKJkxuCYpLiR1By_u0EnMcQKugCghtD6vi8myfsDotG9RC1O3hI8LYO3saMM"/>
+</div>
+<div class="flex flex-col">
+<h3 class="font-bold text-primary text-lg">KV25 København</h3>
+<p class="text-sm text-primary/60 font-medium">Socialdemokratiet</p>
+</div>
+</div>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/30 text-emerald-600 dark:text-emerald-400 text-xs font-bold">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+</span>
+                            I gang
+                        </span>
+</div>
+<!-- Progress Section -->
+<div class="space-y-2">
+<div class="flex justify-between items-end">
+<span class="text-xs font-bold text-primary/60 uppercase tracking-tighter">Fremdrift</span>
+<span class="text-sm font-bold text-primary">12/25 opgaver</span>
+</div>
+<div class="w-full h-2.5 bg-primary/5 dark:bg-primary/20 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 48%;"></div>
+</div>
+</div>
+<!-- Earnings Section -->
+<div class="flex items-center justify-between py-3 px-4 bg-primary/[0.02] dark:bg-white/[0.02] rounded-lg border border-primary/5">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold text-primary/40 tracking-widest">Optjent indtil nu</span>
+<span class="text-lg font-bold text-primary">180 kr. <span class="text-sm font-medium text-primary/40">af 375 kr.</span></span>
+</div>
+<div class="text-primary/20">
+<span class="material-symbols-outlined text-3xl">payments</span>
+</div>
+</div>
+<!-- Action Button -->
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 flex items-center justify-center gap-2 transition-transform active:scale-[0.98]">
+<span class="material-symbols-outlined text-xl">settings_suggest</span>
+                        Fortsæt opsætning
+                    </button>
+</div>
+</div>
+<!-- Placeholder for upcoming/other tasks -->
+<div class="border-2 border-dashed border-primary/10 rounded-xl p-8 flex flex-col items-center justify-center text-center opacity-60">
+<div class="size-12 rounded-full bg-primary/5 flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-primary/40">add_task</span>
+</div>
+<p class="text-sm font-medium text-primary/40 tracking-tight">Ingen flere aktive opgaver i dag</p>
+<button class="mt-4 text-xs font-bold text-primary underline underline-offset-4">Gå til opgavebanken</button>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation -->
+<nav class="sticky bottom-0 bg-white dark:bg-background-dark border-t border-primary/10 px-6 pb-6 pt-3 flex items-center justify-between max-w-md mx-auto w-full">
+<a class="flex flex-col items-center gap-1 group text-primary" href="#">
+<div class="p-1 rounded-lg group-hover:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined active-tab text-2xl">check_box</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-widest">Opgaver</span>
+</a>
+<a class="flex flex-col items-center gap-1 group text-primary/40" href="#">
+<div class="p-1 rounded-lg group-hover:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined text-2xl">chat_bubble</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-widest">Beskeder</span>
+</a>
+<a class="flex flex-col items-center gap-1 group text-primary/40" href="#">
+<div class="p-1 rounded-lg group-hover:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined text-2xl">person</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-widest">Profil</span>
+</a>
+</nav>
+</body></html>

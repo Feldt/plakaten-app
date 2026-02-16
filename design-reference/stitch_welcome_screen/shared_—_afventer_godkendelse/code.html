@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="da"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SHARED — Afventer Godkendelse</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1a355b",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#13181f",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light font-display antialiased">
+<div class="relative flex min-h-screen w-full flex-col bg-gradient-to-b from-white to-background-light overflow-hidden">
+<!-- Top App Bar / Label -->
+<header class="flex items-center justify-center p-6">
+<h2 class="text-primary text-xs font-bold tracking-[0.2em] uppercase opacity-70">
+                SHARED — Afventer Godkendelse
+            </h2>
+</header>
+<!-- Main Content Container -->
+<main class="flex flex-1 flex-col items-center justify-center px-6 pb-24">
+<!-- Metallic Hourglass Icon Container -->
+<div class="mb-10 flex items-center justify-center">
+<div class="relative w-24 h-24 rounded-2xl flex items-center justify-center bg-gradient-to-br from-[#e2e8f0] via-[#cbd5e1] to-[#94a3b8] shadow-lg border border-white/20">
+<div class="absolute inset-0.5 rounded-[14px] bg-gradient-to-tl from-white/30 to-transparent"></div>
+<span class="material-symbols-outlined text-primary text-5xl" style="font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 48;">
+                        hourglass_empty
+                    </span>
+</div>
+</div>
+<!-- Typography Stack -->
+<div class="text-center max-w-sm">
+<h1 class="text-primary text-[28px] font-bold leading-tight tracking-tight mb-4">
+                    Din konto er under gennemgang
+                </h1>
+<p class="text-primary/60 text-base font-normal leading-relaxed mb-8">
+                    Vi foretager en manuel gennemgang af din konto. Dette tager normalt op til 24 timer. Vi giver dig besked så snart du er klar.
+                </p>
+</div>
+<!-- Information Card -->
+<div class="w-full max-w-sm mb-12">
+<div class="bg-white rounded-xl shadow-sm border border-primary/5 p-6 flex flex-col items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-2xl">
+                            business
+                        </span>
+</div>
+<div class="text-center">
+<p class="text-primary/40 text-xs font-bold uppercase tracking-widest mb-1">Registreret Enhed</p>
+<p class="text-primary text-xl font-bold">CVR: 12345678</p>
+</div>
+<div class="w-full h-[140px] rounded-lg bg-cover bg-center mt-2" data-alt="Abstract blue architectural pattern representing business structure" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAl9rU03yy9FDA1YiJSlzIpiHeAcGiB5FCsfH3MO0mtnaYN50BADsG6Ll9k8VMY02Ldt0NKA-jbNEbql33qqgvVNSI2-CzLOwfXx6sbTiZlBBHqxNHWv19tu8tNxheCJ-jvITDzPKFy-_faOKun4S8sRqgRssTh4GM9w8qjSv_9IxODx5DNYHxFgGfN_aQUDCSGJDfK9IZuUPrFVAFNnAZL6yJHFxt90XDgy9G2Xsnx-Y6rFuV-Yn7ZGqBRPwUh2CrhQX_IHmbMa0k');">
+</div>
+</div>
+</div>
+<!-- Contact Support Link -->
+<a class="flex items-center gap-2 text-primary font-semibold hover:opacity-80 transition-opacity" href="#">
+<span class="material-symbols-outlined text-xl">contact_support</span>
+<span>Kontakt support</span>
+</a>
+</main>
+<!-- Footer Action -->
+<footer class="absolute bottom-8 left-0 right-0 flex justify-center">
+<button class="text-primary/40 text-sm font-medium hover:text-primary transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-lg">logout</span>
+                Log ud
+            </button>
+</footer>
+</div>
+</body></html>

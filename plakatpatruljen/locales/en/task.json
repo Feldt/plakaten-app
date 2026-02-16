@@ -1,0 +1,45 @@
+{
+  "status": {
+    "claimed": "Claimed",
+    "pickedUp": "Picked up",
+    "inProgress": "In progress",
+    "completed": "Completed"
+  },
+  "active": "Active",
+  "completed": "Completed",
+  "markPickedUp": "Mark as picked up",
+  "cancel": "Cancel task",
+  "cancelConfirm": "Are you sure you want to cancel this task?",
+  "startHanging": "Start hanging",
+  "continueHanging": "Continue hanging",
+  "noActiveTasks": "No active tasks",
+  "emptyMessage": "Find campaigns on the map and claim posters",
+  "hanging": {
+    "exit": "Exit",
+    "exitConfirm": "Exit hanging session?",
+    "exitMessage": "Your progress is saved. You can continue later.",
+    "logPoster": "Log poster",
+    "outsideZone": "You are outside the assigned zone",
+    "outsideTime": "Hanging is not allowed at this time",
+    "posterLogged": "Poster logged!",
+    "pendingUpload": "{{count}} posters pending upload",
+    "quickRules": "Quick rules",
+    "timeElapsed": "Time elapsed",
+    "remaining": "Remaining",
+    "completed": "All posters hung!",
+    "congratulations": "Congratulations!",
+    "totalEarned": "You earned {{amount}}",
+    "backToTasks": "Back to tasks"
+  },
+  "rules": {
+    "timing": "Timing",
+    "allowed": "Allowed",
+    "prohibited": "Prohibited",
+    "height": "Height",
+    "requirements": "Requirements",
+    "removal": "Removal",
+    "quickRef": "Quick reference",
+    "gotIt": "Got it!",
+    "onboardingRequired": "Please read the rules before you start"
+  }
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="da"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1a355b",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#13181f",
+                        "success": "#10b981",
+                        "error": "#ef4444"
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<title>Rules Guide - Poster Placement</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-primary antialiased">
+<!-- Main Container -->
+<div class="flex min-h-screen w-full flex-col items-center justify-center p-4 sm:p-6">
+<!-- App Bar / Progress Wrapper -->
+<div class="w-full max-w-md mb-6">
+<div class="flex items-center justify-between mb-4">
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-primary">close</span>
+</button>
+<h2 class="text-primary font-bold text-lg">Regelguide</h2>
+<div class="size-10"></div> <!-- Spacer for centering -->
+</div>
+<!-- Progress Dots -->
+<div class="flex w-full flex-row items-center justify-center gap-3">
+<div class="h-2.5 w-2.5 rounded-full bg-primary/20"></div>
+<div class="h-2.5 w-10 rounded-full bg-primary"></div> <!-- Active step -->
+<div class="h-2.5 w-2.5 rounded-full bg-primary/20"></div>
+<div class="h-2.5 w-2.5 rounded-full bg-primary/20"></div>
+<div class="h-2.5 w-2.5 rounded-full bg-primary/20"></div>
+<div class="h-2.5 w-2.5 rounded-full bg-primary/20"></div>
+</div>
+<p class="text-center text-sm font-semibold mt-2 text-primary/60">Trin 2 af 6</p>
+</div>
+<!-- Central Content Card -->
+<main class="w-full max-w-md bg-white dark:bg-slate-900 rounded-xl shadow-xl shadow-primary/5 overflow-hidden border border-primary/5">
+<div class="p-6 sm:p-8">
+<h1 class="text-[#101419] dark:text-white text-2xl font-bold leading-tight text-center mb-8">
+                    Hvor MÅ du hænge plakater?
+                </h1>
+<!-- Allowed Section -->
+<section class="mb-8">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-success font-bold">check_circle</span>
+<h3 class="text-success text-sm font-bold uppercase tracking-wider">Tilladt</h3>
+</div>
+<div class="space-y-3">
+<div class="flex items-center gap-3 p-3 rounded-lg bg-success/5 border border-success/10">
+<span class="material-symbols-outlined text-success text-xl">light</span>
+<p class="text-[#101419] dark:text-slate-200 text-base font-medium">Lygtepæle</p>
+</div>
+<div class="flex items-center gap-3 p-3 rounded-lg bg-success/5 border border-success/10">
+<span class="material-symbols-outlined text-success text-xl">electric_bolt</span>
+<p class="text-[#101419] dark:text-slate-200 text-base font-medium">Elmaster</p>
+</div>
+<div class="flex items-center gap-3 p-3 rounded-lg bg-success/5 border border-success/10">
+<span class="material-symbols-outlined text-success text-xl">park</span>
+<p class="text-[#101419] dark:text-slate-200 text-base font-medium">Vejtræer</p>
+</div>
+<div class="flex items-center gap-3 p-3 rounded-lg bg-success/5 border border-success/10">
+<span class="material-symbols-outlined text-success text-xl">fence</span>
+<p class="text-[#101419] dark:text-slate-200 text-base font-medium">Hegn</p>
+</div>
+</div>
+</section>
+<!-- Forbidden Section -->
+<section class="mb-4">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-error font-bold">cancel</span>
+<h3 class="text-error text-sm font-bold uppercase tracking-wider">Ikke tilladt</h3>
+</div>
+<div class="grid grid-cols-1 gap-2">
+<div class="flex items-center gap-3 p-3 rounded-lg bg-error/5 border border-error/10">
+<span class="material-symbols-outlined text-error text-xl">minor_crash</span>
+<p class="text-[#101419] dark:text-slate-200 text-base font-medium">Motorveje</p>
+</div>
+<div class="flex items-center gap-3 p-3 rounded-lg bg-error/5 border border-error/10">
+<span class="material-symbols-outlined text-error text-xl">forest</span>
+<p class="text-[#101419] dark:text-slate-200 text-base font-medium">Parker</p>
+</div>
+<div class="flex items-center gap-3 p-3 rounded-lg bg-error/5 border border-error/10">
+<span class="material-symbols-outlined text-error text-xl">cell_tower</span>
+<p class="text-[#101419] dark:text-slate-200 text-base font-medium">Højspændingsmaster</p>
+</div>
+<div class="flex items-center gap-3 p-3 rounded-lg bg-error/5 border border-error/10">
+<span class="material-symbols-outlined text-error text-xl">traffic</span>
+<p class="text-[#101419] dark:text-slate-200 text-base font-medium">Trafikskilte</p>
+</div>
+</div>
+</section>
+</div>
+<!-- Footer Action -->
+<div class="p-6 bg-gray-50 dark:bg-slate-800/50 border-t border-primary/5">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 transition-all active:scale-[0.98] flex items-center justify-center gap-2">
+<span>Næste</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</main>
+<!-- Illustration / Background Element -->
+<div class="mt-8 opacity-20 hidden sm:block">
+<img alt="Abstract pattern representing city planning and environment" class="max-w-xs rounded-full grayscale mix-blend-multiply dark:mix-blend-screen" data-alt="Abstract pattern representing city planning and environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbQ6w6U8vMIR7-dTn6QqaoY_oyUTsMc0Gyi-YzhgX6L1vhgGeQkOU5MGuAFVDVhX0zYkk3RDugJlMb048ZK5jvcLiGae2HkVKBUE5oMF39vHxPX7UYTqbhOacVYhTbXHR347J9Wuhf6EdHfTbS7G-cD6vnM6hhx7l2c9v2nqAaK3v0im9FrtdXqM9w6HDlh2l-gBD3h1zFcflGXJ7qLy6LK3jKYSJcS5mCqgZN_tg-E2griOwYO-ygnB0PibAfPvJQwayuVJJDono"/>
+</div>
+</div>
+</body></html>

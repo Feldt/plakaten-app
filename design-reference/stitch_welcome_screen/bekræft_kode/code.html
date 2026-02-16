@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html class="light" lang="da"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1a355b",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#13181f",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<title>OTP Verifikation</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-primary antialiased">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Top App Bar / Navigation -->
+<header class="flex items-center bg-transparent p-4 justify-between">
+<button aria-label="Gå tilbage" class="text-primary dark:text-white flex size-12 shrink-0 items-center justify-start focus:outline-none">
+<span class="material-symbols-outlined text-3xl">arrow_back</span>
+</button>
+<div class="flex-1"></div>
+</header>
+<!-- Main Content Container -->
+<main class="flex-1 flex flex-col px-6 pt-8 max-w-md mx-auto w-full">
+<!-- Branding/Icon Section -->
+<div class="mb-10 flex justify-center">
+<div class="bg-primary/10 dark:bg-primary/20 p-6 rounded-full">
+<span class="material-symbols-outlined text-primary text-5xl">phonelink_lock</span>
+</div>
+</div>
+<!-- Heading Section -->
+<div class="text-center mb-10">
+<h1 class="text-primary dark:text-white tracking-tight text-[32px] font-bold leading-tight pb-3">
+                    Bekræft dit nummer
+                </h1>
+<p class="text-primary/70 dark:text-white/60 text-base font-normal leading-relaxed">
+                    Vi har sendt en kode til <span class="font-semibold text-primary dark:text-white">+45 12 34 56 78</span>
+</p>
+</div>
+<!-- OTP Input Section -->
+<div class="flex justify-center mb-8">
+<fieldset class="relative flex gap-3 sm:gap-4">
+<!-- First input with blue border (Active/Focus State Emulated) -->
+<input autofocus="" class="flex h-14 w-11 sm:w-12 text-center [appearance:textfield] focus:outline-none border-2 border-primary ring-0 bg-white dark:bg-background-dark text-primary dark:text-white text-xl font-bold rounded-lg shadow-sm" max="9" maxlength="1" min="0" type="number" value="5"/>
+<input class="flex h-14 w-11 sm:w-12 text-center [appearance:textfield] focus:outline-none border border-primary/20 ring-0 bg-white dark:bg-background-dark text-primary dark:text-white text-xl font-bold rounded-lg shadow-sm focus:border-primary transition-colors" max="9" maxlength="1" min="0" type="number" value=""/>
+<input class="flex h-14 w-11 sm:w-12 text-center [appearance:textfield] focus:outline-none border border-primary/20 ring-0 bg-white dark:bg-background-dark text-primary dark:text-white text-xl font-bold rounded-lg shadow-sm focus:border-primary transition-colors" max="9" maxlength="1" min="0" type="number" value=""/>
+<input class="flex h-14 w-11 sm:w-12 text-center [appearance:textfield] focus:outline-none border border-primary/20 ring-0 bg-white dark:bg-background-dark text-primary dark:text-white text-xl font-bold rounded-lg shadow-sm focus:border-primary transition-colors" max="9" maxlength="1" min="0" type="number" value=""/>
+<input class="flex h-14 w-11 sm:w-12 text-center [appearance:textfield] focus:outline-none border border-primary/20 ring-0 bg-white dark:bg-background-dark text-primary dark:text-white text-xl font-bold rounded-lg shadow-sm focus:border-primary transition-colors" max="9" maxlength="1" min="0" type="number" value=""/>
+<input class="flex h-14 w-11 sm:w-12 text-center [appearance:textfield] focus:outline-none border border-primary/20 ring-0 bg-white dark:bg-background-dark text-primary dark:text-white text-xl font-bold rounded-lg shadow-sm focus:border-primary transition-colors" max="9" maxlength="1" min="0" type="number" value=""/>
+</fieldset>
+</div>
+<!-- Status / Countdown Section -->
+<div class="text-center mb-12">
+<p class="text-primary/60 dark:text-white/40 text-sm font-normal flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">schedule</span>
+                    Gensend kode om <span class="font-bold text-primary dark:text-white">45s</span>
+</p>
+</div>
+<!-- Action Section -->
+<div class="mt-auto pb-10 flex flex-col gap-4">
+<button class="w-full bg-primary text-white font-bold py-4 rounded-xl shadow-lg hover:opacity-90 active:scale-[0.98] transition-all">
+                    Bekræft
+                </button>
+<button class="w-full bg-transparent text-primary/70 dark:text-white/70 font-semibold py-3 rounded-xl hover:bg-primary/5 transition-colors">
+                    Andet nummer?
+                </button>
+</div>
+</main>
+<!-- Mock Numeric Keypad Area (Visual only for layout context) -->
+<div class="mt-4 bg-primary/5 dark:bg-white/5 p-4 rounded-t-3xl border-t border-primary/10">
+<div class="grid grid-cols-3 gap-2 max-w-sm mx-auto">
+<div class="p-4 text-center font-bold text-xl text-primary dark:text-white">1</div>
+<div class="p-4 text-center font-bold text-xl text-primary dark:text-white">2</div>
+<div class="p-4 text-center font-bold text-xl text-primary dark:text-white">3</div>
+<div class="p-4 text-center font-bold text-xl text-primary dark:text-white">4</div>
+<div class="p-4 text-center font-bold text-xl text-primary dark:text-white">5</div>
+<div class="p-4 text-center font-bold text-xl text-primary dark:text-white">6</div>
+<div class="p-4 text-center font-bold text-xl text-primary dark:text-white">7</div>
+<div class="p-4 text-center font-bold text-xl text-primary dark:text-white">8</div>
+<div class="p-4 text-center font-bold text-xl text-primary dark:text-white">9</div>
+<div class="p-4 text-center font-bold text-xl text-primary dark:text-white"></div>
+<div class="p-4 text-center font-bold text-xl text-primary dark:text-white">0</div>
+<div class="p-4 text-center flex items-center justify-center text-primary dark:text-white">
+<span class="material-symbols-outlined">backspace</span>
+</div>
+</div>
+</div>
+</div>
+</body></html>

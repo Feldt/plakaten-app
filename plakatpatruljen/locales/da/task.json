@@ -1,0 +1,45 @@
+{
+  "status": {
+    "claimed": "Taget",
+    "pickedUp": "Afhentet",
+    "inProgress": "I gang",
+    "completed": "Fuldført"
+  },
+  "active": "Aktive",
+  "completed": "Afsluttede",
+  "markPickedUp": "Markér som afhentet",
+  "cancel": "Annuller opgave",
+  "cancelConfirm": "Er du sikker på, at du vil annullere denne opgave?",
+  "startHanging": "Start ophængning",
+  "continueHanging": "Fortsæt ophængning",
+  "noActiveTasks": "Ingen aktive opgaver",
+  "emptyMessage": "Find kampagner på kortet og tag plakater",
+  "hanging": {
+    "exit": "Afslut",
+    "exitConfirm": "Afslut ophængning?",
+    "exitMessage": "Din fremgang er gemt. Du kan fortsætte senere.",
+    "logPoster": "Registrér plakat",
+    "outsideZone": "Du er uden for den tildelte zone",
+    "outsideTime": "Ophængning er ikke tilladt på dette tidspunkt",
+    "posterLogged": "Plakat registreret!",
+    "pendingUpload": "{{count}} plakater venter på upload",
+    "quickRules": "Hurtige regler",
+    "timeElapsed": "Tid brugt",
+    "remaining": "Resterende",
+    "completed": "Alle plakater ophængt!",
+    "congratulations": "Tillykke!",
+    "totalEarned": "Du har tjent {{amount}}",
+    "backToTasks": "Tilbage til opgaver"
+  },
+  "rules": {
+    "timing": "Tidspunkt",
+    "allowed": "Tilladt",
+    "prohibited": "Forbudt",
+    "height": "Højde",
+    "requirements": "Krav",
+    "removal": "Nedtagning",
+    "quickRef": "Hurtig reference",
+    "gotIt": "Forstået!",
+    "onboardingRequired": "Læs venligst reglerne inden du starter"
+  }
+}

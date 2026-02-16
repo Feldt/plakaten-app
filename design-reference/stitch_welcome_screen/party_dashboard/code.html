@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html lang="da"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PlakatPatruljen - Party Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1a355b",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#13181f",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Public Sans", sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-tab .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header Section -->
+<header class="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-4 pt-6 pb-4">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-red-50 flex items-center justify-center border border-red-100 overflow-hidden">
+<img alt="Socialdemokratiet Logo" class="size-6 object-contain" data-alt="Socialdemokratiet party rose logo icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2XsdS_MWtE74_TCozLxXKbPgkrTWOOGsbwIZKDo1Cdz33sAbtQOmIOobdQZv5YmQ-VgrGuuWbMqtaqaMqiXwhMUg8ppk-6lrZKsqLO4h0kI1Vicy64FW9n1A3fM_xAC-m_u8BvPkiMgZGBwNXYzRHAfzvdJE8xBSFfngLmW_r-Lpgu4ZXF8nuCnzWOvxDpDyW44uoeqYJxb_XUm0WbL_9S7mpJZs3FXDIMkVGk_tKnzhNxHe4iChbdqGu0SU1OrNvplFqOi5v51I"/>
+</div>
+<div>
+<p class="text-xs font-medium text-slate-500 uppercase tracking-wider">Dashboard</p>
+<h1 class="text-lg font-bold text-primary dark:text-slate-200">Velkommen tilbage, Socialdemokratiet</h1>
+</div>
+</div>
+<button class="size-10 flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+</header>
+<!-- Main Content Scroll Area -->
+<main class="flex-1 overflow-y-auto pb-24">
+<!-- Stats Grid -->
+<div class="grid grid-cols-2 gap-3 p-4">
+<div class="bg-white dark:bg-slate-900 p-4 rounded-lg shadow-sm border border-slate-100 dark:border-slate-800">
+<p class="text-slate-500 text-xs font-medium mb-1">Aktive kampagner</p>
+<p class="text-2xl font-bold text-primary dark:text-slate-200">3</p>
+</div>
+<div class="bg-white dark:bg-slate-900 p-4 rounded-lg shadow-sm border border-slate-100 dark:border-slate-800">
+<p class="text-slate-500 text-xs font-medium mb-1">Plakater</p>
+<p class="text-2xl font-bold text-primary dark:text-slate-200">847</p>
+</div>
+<div class="bg-white dark:bg-slate-900 p-4 rounded-lg shadow-sm border border-slate-100 dark:border-slate-800">
+<p class="text-slate-500 text-xs font-medium mb-1">Hjælpere</p>
+<p class="text-2xl font-bold text-primary dark:text-slate-200">23</p>
+</div>
+<div class="bg-white dark:bg-slate-900 p-4 rounded-lg shadow-sm border border-slate-100 dark:border-slate-800">
+<p class="text-slate-500 text-xs font-medium mb-1">Beløb</p>
+<p class="text-2xl font-bold text-primary dark:text-slate-200">12.705 kr.</p>
+</div>
+</div>
+<!-- Action Button -->
+<div class="px-4 mb-8">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-lg flex items-center justify-center gap-2 transition-colors shadow-md shadow-primary/20">
+<span class="material-symbols-outlined">add_circle</span>
+                Opret ny kampagne
+            </button>
+</div>
+<!-- Campaign Section -->
+<div class="px-4">
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-lg font-bold text-slate-800 dark:text-slate-200">Dine kampagner</h2>
+<button class="text-primary dark:text-blue-400 text-sm font-semibold">Se alle</button>
+</div>
+<!-- Campaign Cards List -->
+<div class="space-y-4">
+<!-- Card 1 -->
+<div class="bg-white dark:bg-slate-900 p-5 rounded-lg border border-slate-100 dark:border-slate-800 shadow-sm">
+<div class="flex justify-between items-start mb-3">
+<div>
+<div class="flex gap-2 mb-2">
+<span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-[10px] font-bold rounded uppercase tracking-wide">Kommunalvalg</span>
+<span class="px-2 py-0.5 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-[10px] font-bold rounded uppercase tracking-wide flex items-center gap-1">
+<span class="size-1.5 rounded-full bg-green-500"></span>
+                                    Aktiv
+                                </span>
+</div>
+<h3 class="font-bold text-slate-900 dark:text-slate-100 text-lg">Hovedstadsområdet 2024</h3>
+</div>
+<p class="text-primary font-bold text-sm bg-primary/5 px-2 py-1 rounded">15 kr./plakat</p>
+</div>
+<div class="space-y-2 mb-4">
+<div class="flex justify-between text-xs font-medium text-slate-500 uppercase tracking-tight">
+<span>Fremskridt</span>
+<span>423 / 500 plakater</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-800 h-2.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 84.6%"></div>
+</div>
+</div>
+<div class="flex items-center gap-2 text-slate-500 text-xs">
+<span class="material-symbols-outlined text-sm">calendar_month</span>
+<span>1. sep - 15. nov 2024</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-white dark:bg-slate-900 p-5 rounded-lg border border-slate-100 dark:border-slate-800 shadow-sm">
+<div class="flex justify-between items-start mb-3">
+<div>
+<div class="flex gap-2 mb-2">
+<span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-[10px] font-bold rounded uppercase tracking-wide">Europa-Parlamentet</span>
+<span class="px-2 py-0.5 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-[10px] font-bold rounded uppercase tracking-wide flex items-center gap-1">
+<span class="size-1.5 rounded-full bg-green-500"></span>
+                                    Aktiv
+                                </span>
+</div>
+<h3 class="font-bold text-slate-900 dark:text-slate-100 text-lg">Valgkamp 2024 - Jylland</h3>
+</div>
+<p class="text-primary font-bold text-sm bg-primary/5 px-2 py-1 rounded">12 kr./plakat</p>
+</div>
+<div class="space-y-2 mb-4">
+<div class="flex justify-between text-xs font-medium text-slate-500 uppercase tracking-tight">
+<span>Fremskridt</span>
+<span>158 / 1.000 plakater</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-800 h-2.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 15.8%"></div>
+</div>
+</div>
+<div class="flex items-center gap-2 text-slate-500 text-xs">
+<span class="material-symbols-outlined text-sm">calendar_month</span>
+<span>15. maj - 10. jun 2024</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 px-4 pb-6 pt-2 z-50">
+<div class="max-w-md mx-auto flex justify-between items-center">
+<a class="flex flex-col items-center gap-1 text-primary active-tab" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Hjem</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">speaker_phone</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Kampagner</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Hjælpere</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Indstil.</span>
+</a>
+</div>
+</nav>
+</body></html>

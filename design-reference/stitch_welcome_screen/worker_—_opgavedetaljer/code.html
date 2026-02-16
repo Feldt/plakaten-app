@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="da"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1a355b",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#13181f",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>WORKER — Opgavedetaljer</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light font-display text-slate-900 antialiased">
+<div class="flex flex-col min-h-screen max-w-md mx-auto bg-background-light relative pb-24">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-10 flex items-center bg-background-light/80 backdrop-blur-md px-4 py-4 gap-4">
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-slate-200 transition-colors">
+<span class="material-symbols-outlined text-primary text-2xl">arrow_back</span>
+</button>
+<h1 class="text-primary text-lg font-bold leading-tight tracking-tight">WORKER — Opgavedetaljer</h1>
+</header>
+<main class="flex-1 overflow-y-auto px-4 py-2 space-y-6">
+<!-- Primary Campaign Card -->
+<section class="bg-white rounded-xl p-5 shadow-sm border border-slate-100">
+<div class="flex items-start justify-between mb-4">
+<div class="flex-1">
+<div class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-green-100 text-green-700 mb-2">
+<span class="size-1.5 rounded-full bg-green-500 mr-1.5"></span>
+                            I gang
+                        </div>
+<h2 class="text-xl font-bold text-slate-900 leading-tight">KV25 København</h2>
+<p class="text-slate-500 font-medium">Socialdemokratiet</p>
+</div>
+<div class="size-16 rounded-lg bg-primary/5 flex items-center justify-center overflow-hidden border border-slate-50">
+<img class="w-full h-full object-contain p-2" data-alt="Socialdemokratiet party logo placeholder" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC24iZUpvM3SACwOB0xF9yH3BFKdy9n3QrnaShSuU14RgRb7A4dW7DD3AaNBqHVPoZfxHgLIGZbqLfuNwOWE41ZICyZGOn_X1kJqdMLHzzMbB-ONDpEsfwYxnZPtcE2CTTB8W_upEOImx6c0q2sp9nTWauXDjEjZqHXvFn6Kv7ly4QanR7hXZ5QwDfyHBuqmKYDYuZrr6BlIrgcZ5cXZ5k99Ot7sETQHY_LGBRA5eomK1JzFJsKTr8fL_bz9eo7azjLaB-S3-xUXNw"/>
+</div>
+</div>
+<div class="w-full h-32 rounded-lg bg-slate-100 overflow-hidden">
+<img class="w-full h-full object-cover opacity-80" data-alt="Map view of Copenhagen city center" data-location="Copenhagen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtWy6dabqLyh18ZU92H5gExLIRdkPy0fy_iQsqrw8jAoocUBR0yPG-meNwMi6jGpFIf-O-rP727NMG2x8e-SpQ6z4ewr1EZvkwzd0rOXs7tnd_VRWx52hOUgxxVGuWuz14HfLfNkD5lzLXBquppQ8oFfOJsh--Uz0DCGUXDqzYeW_i2kYGMkg21Qz9ez9t1OsAAF_3t4q_1mmJhrIOg_1lT2fdcal-yt9yXr-7kTs51aVnOg3rGx9Xq32NCCZVzzIKMtMQem93hpU"/>
+</div>
+</section>
+<!-- Stats Row -->
+<section class="grid grid-cols-3 gap-3">
+<div class="bg-white p-4 rounded-xl shadow-sm border border-slate-100 flex flex-col gap-1">
+<span class="text-slate-500 text-xs font-semibold uppercase tracking-wider">Plakater</span>
+<span class="text-primary text-lg font-bold">12/25</span>
+</div>
+<div class="bg-white p-4 rounded-xl shadow-sm border border-slate-100 flex flex-col gap-1">
+<span class="text-slate-500 text-xs font-semibold uppercase tracking-wider">Optjent</span>
+<span class="text-primary text-lg font-bold">180 kr.</span>
+</div>
+<div class="bg-white p-4 rounded-xl shadow-sm border border-slate-100 flex flex-col gap-1">
+<span class="text-slate-500 text-xs font-semibold uppercase tracking-wider">Tilbage</span>
+<span class="text-primary text-lg font-bold">13 stk</span>
+</div>
+</section>
+<!-- Activity Log Section -->
+<section class="space-y-4">
+<div class="flex items-center justify-between px-1">
+<h3 class="text-slate-900 text-lg font-bold">Plakat log</h3>
+<span class="text-primary text-sm font-semibold cursor-pointer">Se alle</span>
+</div>
+<div class="space-y-3">
+<!-- Log Entry 1 -->
+<div class="bg-white p-3 rounded-xl shadow-sm border border-slate-100 flex items-center gap-4">
+<div class="size-14 rounded-lg bg-slate-200 overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Close up photo of a political poster on a pole" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJABTTDZNlSpcM7I9X-iolpq4sC1FA8brssxjVwz_CvsONAZTGzE2EaXFw7sFR-KqQ_Hho4PHcSgejfwwGJJgNCbv5LuK8uU43_apVsG6h0a8RYhGxmaINEWTY5pFOeuDf7m2sRzve15cuzuwMrhnue-AVCwEazFtjIZWIRtREHwAEl6Asr8M6EUDVxT9-2a1zi9wYvxB1b_7EfdAfgM5KMEACJ2LmNfFP7r_9-G2_n-Z_u_NVqur0N2Y5oKglshSGUUoSZ9dyZd4"/>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-slate-900 font-semibold truncate">Rådhuspladsen 1</p>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="text-slate-400 text-xs">14:20</span>
+<span class="text-slate-300">•</span>
+<div class="flex items-center text-green-600 text-[10px] font-bold uppercase tracking-tight">
+<span class="material-symbols-outlined text-[14px] mr-0.5">verified</span>
+                                    Verificeret
+                                </div>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-300">chevron_right</span>
+</div>
+<!-- Log Entry 2 -->
+<div class="bg-white p-3 rounded-xl shadow-sm border border-slate-100 flex items-center gap-4">
+<div class="size-14 rounded-lg bg-slate-200 overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Campaign worker placing poster on lamp post" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzG4UwwrfT5WdbcjZ_fo5xQS8vj_Ccz9RwvRII_rE_pdPH9paKWNFPAsS8FNCJOAN_Lo4f47Lx6QNybic7OmlNuhN6t8IyFm5YqZ3K6cLGagjyKXo5FHstU-x3yk3qwj_p8yHEgcnwozZw5yKrXKcaJfQbqBm-1oBQnc_BPuR41TzoqlYxvKs82EcFfFgsnyMie0AHY3iFj29Z91_mR2uSU5FZqcfFi-ZUk23iSSUUToy5FCm-_g-RcyukVMQ2alZYqA3tU3_gOvw"/>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-slate-900 font-semibold truncate">Vesterbrogade 10</p>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="text-slate-400 text-xs">14:35</span>
+<span class="text-slate-300">•</span>
+<div class="flex items-center text-green-600 text-[10px] font-bold uppercase tracking-tight">
+<span class="material-symbols-outlined text-[14px] mr-0.5">verified</span>
+                                    Verificeret
+                                </div>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-300">chevron_right</span>
+</div>
+<!-- Log Entry 3 -->
+<div class="bg-white p-3 rounded-xl shadow-sm border border-slate-100 flex items-center gap-4">
+<div class="size-14 rounded-lg bg-slate-200 overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Poster installation on street corner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4Drr9ZJ_9FvKcJ4XpnDQSTeqfQQXpOIvF19cyb1BBKSjOaE-zbHKJrVQqONoqE0SoiGpY4CWTR6U5AFhAtrD4tOqrRwwjvBlYoVzInZiPeucV4yPzc3KYXNnpHA_KFsx_VXs0VKs8Dvg1MjipY3WIGbv8GVuJp5Wl288T_Mp6qv3y0YTDL6h53VkC7yk4H4x1hFPHjWsl1r2o7RwTKaYVo9qoQfn6d2N2ikaaULWJ-0oMNzjFeBUUc_-3ER3K5dutqvbp1P4mPjg"/>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-slate-900 font-semibold truncate">Frederiksberg Allé 2</p>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="text-slate-400 text-xs">14:55</span>
+<span class="text-slate-300">•</span>
+<div class="flex items-center text-green-600 text-[10px] font-bold uppercase tracking-tight">
+<span class="material-symbols-outlined text-[14px] mr-0.5">verified</span>
+                                    Verificeret
+                                </div>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-300">chevron_right</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Fixed CTA Button -->
+<footer class="fixed bottom-0 left-0 right-0 max-w-md mx-auto p-4 bg-background-light/95 backdrop-blur-sm">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 px-6 rounded-xl transition-all shadow-lg flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">add_location_alt</span>
+                Fortsæt opsætning
+            </button>
+</footer>
+</div>
+</body></html>

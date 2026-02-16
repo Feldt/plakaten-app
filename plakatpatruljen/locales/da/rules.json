@@ -1,0 +1,62 @@
+{
+  "title": "Regler for valgplakater",
+  "subtitle": "Baseret på Vejlovens §84",
+  "categories": {
+    "placement": "Placering",
+    "timing": "Tidspunkt",
+    "size": "Størrelse",
+    "safety": "Sikkerhed",
+    "removal": "Nedtagning"
+  },
+  "rules": {
+    "heightMinimum": {
+      "title": "Minimumshøjde",
+      "description": "Plakater skal hænges mindst 2,3 meter over vejbanen."
+    },
+    "roadSafety": {
+      "title": "Trafiksikkerhed",
+      "description": "Plakater må ikke dække for vejskilte, signaler eller på anden måde genere trafiksikkerheden."
+    },
+    "intersectionDistance": {
+      "title": "Afstand til kryds",
+      "description": "Plakater må ikke hænges tættere end 10 meter fra et vejkryds."
+    },
+    "posterSpacing": {
+      "title": "Afstand mellem plakater",
+      "description": "Der skal være mindst 50 meter mellem plakater fra samme parti."
+    },
+    "hangingPeriod": {
+      "title": "Ophængningsperiode",
+      "description": "Plakater må tidligst ophænges den 4. lørdag før valgdagen."
+    },
+    "removalDeadline": {
+      "title": "Nedtagningsfrist",
+      "description": "Plakater skal være nedtaget senest 8 dage efter valgdagen."
+    },
+    "privateProperty": {
+      "title": "Privat ejendom",
+      "description": "Plakater må ikke ophænges på privat ejendom uden tilladelse."
+    },
+    "contactInfo": {
+      "title": "Kontaktoplysninger",
+      "description": "Alle valgplakater skal indeholde navn, adresse og telefonnummer på den ansvarlige."
+    },
+    "motorwayProhibition": {
+      "title": "Motorvejsforbud",
+      "description": "Plakater må ikke ophænges langs motorveje og motortrafikveje."
+    },
+    "maxSize": {
+      "title": "Maksimal størrelse",
+      "description": "Plakater må højst være 0,8 m² i areal."
+    }
+  },
+  "violations": {
+    "warning": "Advarsel",
+    "error": "Fejl",
+    "heightTooLow": "Plakaten hænger for lavt. Minimum {{min}}m krævet.",
+    "tooCloseToIntersection": "For tæt på vejkryds. Minimum {{min}}m krævet.",
+    "tooCloseToOtherPoster": "For tæt på anden plakat. Minimum {{min}}m krævet.",
+    "outsideHangingPeriod": "Ophængning er ikke tilladt uden for ophængningsperioden.",
+    "motorwayNotAllowed": "Plakater er forbudt langs motorveje."
+  }
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html class="light" lang="da"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "navy-custom": "#1a2b4b",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .titanium-gradient {
+            background: linear-gradient(135deg, #F4F5F7 0%, #ECEEF1 40%, #F7F8FA 75%, #FFFFFF 100%);
+        }
+        .frosted-card {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+            position: relative;
+        }
+        .frosted-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 1), transparent);
+            z-index: 10;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark min-h-screen">
+<div class="relative flex h-screen w-full flex-col titanium-gradient overflow-hidden">
+<!-- Top App Bar -->
+<div class="flex items-center p-4 pb-2 justify-between z-10">
+<div class="text-navy-custom flex size-10 shrink-0 items-center justify-center cursor-pointer rounded-full hover:bg-white/50 transition-colors">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</div>
+<h2 class="text-navy-custom/60 text-xs font-bold uppercase tracking-widest flex-1 text-center pr-10">WORKER — Registrering</h2>
+</div>
+<!-- Content Area -->
+<div class="flex-1 px-6 pt-8 pb-32 overflow-y-auto">
+<header class="mb-8">
+<h1 class="text-[#1a2b4b] text-[28px] font-bold leading-tight mb-2">Opret dig som hjælper</h1>
+<p class="text-navy-custom/60 text-base font-normal">Det tager under et minut.</p>
+</header>
+<!-- Registration Form Card -->
+<div class="frosted-card rounded-xl p-6 space-y-6">
+<!-- Full Name Field -->
+<div class="flex flex-col gap-2">
+<label class="text-navy-custom text-sm font-semibold uppercase tracking-wider ml-1">Fulde navn</label>
+<div class="relative">
+<input class="w-full h-14 bg-white/60 border border-white/80 rounded-lg px-4 text-navy-custom placeholder:text-navy-custom/30 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all" placeholder="Indtast dit navn" type="text"/>
+</div>
+</div>
+<!-- Email Field -->
+<div class="flex flex-col gap-2">
+<label class="text-navy-custom text-sm font-semibold uppercase tracking-wider ml-1">Email (valgfrit)</label>
+<div class="relative">
+<input class="w-full h-14 bg-white/60 border border-white/80 rounded-lg px-4 text-navy-custom placeholder:text-navy-custom/30 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all" placeholder="navn@eksempel.dk" type="email"/>
+</div>
+</div>
+<!-- Phone Number Field -->
+<div class="flex flex-col gap-2">
+<label class="text-navy-custom text-sm font-semibold uppercase tracking-wider ml-1">Telefonnummer</label>
+<div class="flex gap-2">
+<div class="flex items-center justify-center h-14 px-4 bg-white/80 border border-white/80 rounded-lg text-navy-custom/60 font-medium">
+                            +45
+                        </div>
+<input class="flex-1 h-14 bg-white/60 border border-white/80 rounded-lg px-4 text-navy-custom placeholder:text-navy-custom/30 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all" inputmode="numeric" placeholder="00 00 00 00" type="tel"/>
+</div>
+</div>
+</div>
+<!-- Visual Hint/Illustration Placeholder -->
+<div class="mt-8 flex justify-center">
+<div class="w-24 h-1 rounded-full bg-navy-custom/10"></div>
+</div>
+</div>
+<!-- Sticky Bottom Navigation -->
+<div class="fixed bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-background-light to-transparent">
+<button class="w-full h-16 bg-navy-custom text-white rounded-xl font-bold text-lg flex items-center justify-center gap-2 shadow-xl shadow-navy-custom/20 active:scale-[0.98] transition-transform">
+<span>Næste</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<!-- Home Indicator (iOS style) -->
+<div class="mt-4 flex justify-center">
+<div class="w-32 h-1.5 bg-navy-custom/20 rounded-full"></div>
+</div>
+</div>
+</div>
+</body></html>

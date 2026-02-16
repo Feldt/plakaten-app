@@ -1,0 +1,37 @@
+{
+  "general": {
+    "unknown": "Der opstod en uventet fejl",
+    "network": "Ingen internetforbindelse",
+    "timeout": "Anmodningen tog for lang tid",
+    "serverError": "Serverfejl. Prøv igen senere.",
+    "notFound": "Ikke fundet",
+    "unauthorized": "Du har ikke adgang til denne ressource",
+    "forbidden": "Adgang nægtet",
+    "validation": "Ugyldig input"
+  },
+  "campaign": {
+    "createFailed": "Kunne ikke oprette kampagne",
+    "updateFailed": "Kunne ikke opdatere kampagne",
+    "deleteFailed": "Kunne ikke slette kampagne",
+    "notFound": "Kampagne ikke fundet",
+    "alreadyCompleted": "Kampagnen er allerede afsluttet"
+  },
+  "task": {
+    "claimFailed": "Kunne ikke tage opgaven",
+    "alreadyClaimed": "Opgaven er allerede taget",
+    "maxClaimsReached": "Du har nået det maksimale antal aktive opgaver",
+    "expired": "Opgaven er udløbet",
+    "completeFailed": "Kunne ikke fuldføre opgaven"
+  },
+  "photo": {
+    "required": "Et foto er påkrævet",
+    "uploadFailed": "Kunne ikke uploade foto",
+    "tooSmall": "Fotoet er for lille. Minimum {{width}}x{{height}} pixels."
+  },
+  "location": {
+    "permissionDenied": "Placeringstilladelse er påkrævet",
+    "unavailable": "Placering er ikke tilgængelig",
+    "outsideDenmark": "Placeringen er uden for Danmark",
+    "outsideZone": "Du er uden for den tildelte zone"
+  }
+}

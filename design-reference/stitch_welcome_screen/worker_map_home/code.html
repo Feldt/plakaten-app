@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html lang="da"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PlakatPatruljen - Worker Map</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1a355b",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#13181f",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; }
+        .map-gradient {
+            background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 80%, rgba(0,0,0,0.1) 100%);
+        }
+        .pulse-dot {
+            box-shadow: 0 0 0 0 rgba(26, 53, 91, 0.7);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(26, 53, 91, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(26, 53, 91, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(26, 53, 91, 0); }
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display overflow-hidden h-screen w-screen">
+<!-- Main Map Container -->
+<div class="relative h-screen w-full bg-slate-200 overflow-hidden">
+<!-- Mock Map Background -->
+<div class="absolute inset-0 z-0 bg-cover bg-center" data-alt="Detailed city map of Copenhagen with street names and parks" data-location="Copenhagen" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDv_L8BmUkaaDcaY-zlQWAzZ3H-nuQFHcwK0yWWMUHPGPV37U9-k2YQzp8B-VJSmcJw77TgNn65__BKYebsivAJaI3eOKIiCuCHLMuo3En7BmWwcKH8XxFXY8Q4D2aFllHDc1NoykyfafUDIpkkLfqgzNXjgJ8FNZtEyvoQrZeexs2eL-7hXVke7f2Wsy6TZMpWVWjSjk6rwrFtbCLQWNrxZInPc7EbnunWUBNeVfvzduiZmUoZk0McEsbXFpmKjKWxto0pa_Ut4tU');">
+<!-- Simulated Polygons (Campaign Zones) -->
+<!-- Zone 1: Blue -->
+<div class="absolute top-[20%] left-[15%] w-[40%] h-[30%] bg-primary/15 border-2 border-primary rounded-xl rotate-12 backdrop-blur-[1px]"></div>
+<!-- Zone 2: Green -->
+<div class="absolute top-[50%] left-[55%] w-[35%] h-[25%] bg-emerald-500/15 border-2 border-emerald-500 rounded-lg -rotate-6 backdrop-blur-[1px]"></div>
+<!-- Zone 3: Purple -->
+<div class="absolute top-[10%] left-[60%] w-[25%] h-[20%] bg-purple-500/15 border-2 border-purple-500 rounded-full opacity-80 backdrop-blur-[1px]"></div>
+<!-- Worker GPS Dot -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+<div class="relative flex items-center justify-center">
+<div class="pulse-dot w-6 h-6 bg-primary border-2 border-white rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Map Overlay Gradient for UI Legibility -->
+<div class="absolute inset-0 map-gradient pointer-events-none z-10"></div>
+<!-- Top Header / Search -->
+<div class="absolute top-0 left-0 w-full p-4 z-20">
+<div class="flex items-center gap-3">
+<div class="flex-1 bg-white/95 backdrop-blur shadow-lg rounded-xl flex items-center px-4 py-3 border border-slate-200">
+<span class="material-symbols-outlined text-slate-400 mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-slate-800 w-full text-sm" placeholder="Søg efter kampagner..." type="text"/>
+</div>
+<button class="bg-white/95 backdrop-blur p-3 rounded-xl shadow-lg border border-slate-200 flex items-center justify-center">
+<span class="material-symbols-outlined text-slate-700">filter_list</span>
+</button>
+</div>
+</div>
+<!-- My Location Button (Floating) -->
+<div class="absolute right-4 bottom-52 z-20">
+<button class="w-12 h-12 bg-white rounded-full shadow-xl flex items-center justify-center text-primary active:bg-slate-50 transition-colors border border-slate-100">
+<span class="material-symbols-outlined fill-[1]">my_location</span>
+</button>
+</div>
+<!-- Bottom UI Area -->
+<div class="absolute bottom-0 left-0 w-full z-30 pb-[72px]">
+<!-- Horizontally Scrollable Cards (Carousel) -->
+<div class="flex overflow-x-auto hide-scrollbar snap-x snap-mandatory px-4 gap-3 pb-4">
+<!-- Card 1 -->
+<div class="snap-center shrink-0 w-[280px] bg-white rounded-xl shadow-xl overflow-hidden border border-slate-100">
+<div class="p-4">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center overflow-hidden">
+<img alt="Party A" data-alt="Circular party logo for a political party" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmLGyrfFy9cO6rv7GCoOJ4FakW3XQRL8zh_Frlz6axdSQKlqj3S5a-oGoV1uPRT2RlzRB5O451UZR8283QBk68740LLC5o_wlwbe7m5T3S79DbFDuTm_RpLK83HecWwF3m2wD5_4TPj1bZTtevwbiXsZx9oZIRjtyewuumBZesX9fo748cR2Hh2wby2KhLQL3yjecCLfYR3AjHYjxliF5dFYVydFovaVR5RV-sRwwmEM-JZcp_Gm3eY9_O45wvpDbvtHuFRvx3064"/>
+</div>
+<div>
+<h3 class="font-bold text-slate-900 leading-tight">KV25 København</h3>
+<p class="text-xs text-slate-500">Socialdemokratiet</p>
+</div>
+</div>
+<div class="space-y-1.5 mb-4">
+<div class="flex items-center justify-between">
+<span class="text-sm text-slate-600">Sats</span>
+<span class="text-primary font-bold">15 kr./plakat</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-sm text-slate-600">Tilgængelig</span>
+<span class="text-slate-900 font-semibold text-sm">142 ledige</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-sm text-slate-600">Afstand</span>
+<span class="text-slate-900 font-semibold text-sm">2,3 km</span>
+</div>
+</div>
+<button class="w-full bg-primary text-white py-2 rounded-lg text-sm font-semibold hover:bg-primary/90 transition-colors">Se rute</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="snap-center shrink-0 w-[280px] bg-white rounded-xl shadow-xl overflow-hidden border border-slate-100">
+<div class="p-4">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center overflow-hidden">
+<img alt="Party V" data-alt="Circular party logo for a political party" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwHrzkbugqDo9aO9iJcKTG4jFpsBEtEZVa_BS3yVd7-1SZiVi_E9fn-3WYnLU30k8Nml7PSdx89r7jE8AtGv_rtU8FsD0lyU0Abu-Rtm9Nth7F4dQL6yG7eQtV6lNIyu02Wqu4a7DndhcxIxTViyKCBAwu75jPRTBDQvzC8dGvsteiEwc75YfPZx8fzA7Tw4f3XXaMfPBdBseOfqYvQ4vWuzZW5FMge8etIQZYyZnjyQK7IJ97hk73WiNoXILWnxZyPgGEkU92Kik"/>
+</div>
+<div>
+<h3 class="font-bold text-slate-900 leading-tight">Region Hovedstaden</h3>
+<p class="text-xs text-slate-500">Venstre</p>
+</div>
+</div>
+<div class="space-y-1.5 mb-4">
+<div class="flex items-center justify-between">
+<span class="text-sm text-slate-600">Sats</span>
+<span class="text-primary font-bold">18 kr./plakat</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-sm text-slate-600">Tilgængelig</span>
+<span class="text-slate-900 font-semibold text-sm">85 ledige</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-sm text-slate-600">Afstand</span>
+<span class="text-slate-900 font-semibold text-sm">1,1 km</span>
+</div>
+</div>
+<button class="w-full bg-primary text-white py-2 rounded-lg text-sm font-semibold hover:bg-primary/90 transition-colors">Se rute</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="snap-center shrink-0 w-[280px] bg-white rounded-xl shadow-xl overflow-hidden border border-slate-100">
+<div class="p-4">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center overflow-hidden">
+<img alt="Party C" data-alt="Circular party logo for a political party" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAetPC4hbvtySdFiWU-9r2mMYkVc-Y4pDafNZO-gWwTXtfS1h1NLbKusqYxS1VfxCt4qfmkHvtWAnyEPpRnuO0oOExAusRQI0aK1mNx-uFFbQyfwkDeOtQrGhQZbS6sAHoJaIrmHkoeVCvMzbfsoUvdrt9ayQ_YYiAYPlgOQxI5ynnGs71jj_fzqSmiO7cAWIXpUgKDik-y3aj3JLOQ4uhVRPEszC-7w96lLVE0MJUfFL3DjkZsya7l_8ZjKBebnMim3a3_u5IXoQ"/>
+</div>
+<div>
+<h3 class="font-bold text-slate-900 leading-tight">Frederiksberg '25</h3>
+<p class="text-xs text-slate-500">Konservative</p>
+</div>
+</div>
+<div class="space-y-1.5 mb-4">
+<div class="flex items-center justify-between">
+<span class="text-sm text-slate-600">Sats</span>
+<span class="text-primary font-bold">12 kr./plakat</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-sm text-slate-600">Tilgængelig</span>
+<span class="text-slate-900 font-semibold text-sm">30 ledige</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-sm text-slate-600">Afstand</span>
+<span class="text-slate-900 font-semibold text-sm">4,5 km</span>
+</div>
+</div>
+<button class="w-full bg-primary text-white py-2 rounded-lg text-sm font-semibold hover:bg-primary/90 transition-colors">Se rute</button>
+</div>
+</div>
+<!-- Spacer for scroll end -->
+<div class="shrink-0 w-4"></div>
+</div>
+</div>
+<!-- iOS Bottom Tab Bar -->
+<div class="fixed bottom-0 left-0 w-full bg-white/95 backdrop-blur-md border-t border-slate-200 z-50 h-[72px] safe-area-inset-bottom">
+<div class="flex items-center h-full px-6">
+<a class="flex-1 flex flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined text-[26px] fill-[1]">map</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Kort</span>
+</a>
+<a class="flex-1 flex flex-col items-center justify-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined text-[26px]">checklist</span>
+<span class="text-[10px] font-medium uppercase tracking-wider">Opgaver</span>
+</a>
+<a class="flex-1 flex flex-col items-center justify-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined text-[26px]">wallet</span>
+<span class="text-[10px] font-medium uppercase tracking-wider">Indtjening</span>
+</a>
+<a class="flex-1 flex flex-col items-center justify-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined text-[26px]">person</span>
+<span class="text-[10px] font-medium uppercase tracking-wider">Profil</span>
+</a>
+</div>
+</div>
+</div>
+</body></html>

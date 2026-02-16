@@ -1,0 +1,83 @@
+{
+  "app": {
+    "name": "PlakatPatruljen",
+    "tagline": "Valgplakat-logistik gjort nemt"
+  },
+  "navigation": {
+    "home": "Hjem",
+    "campaigns": "Kampagner",
+    "tasks": "Opgaver",
+    "earnings": "Indtjening",
+    "profile": "Profil",
+    "settings": "Indstillinger",
+    "workers": "Plakatører",
+    "rules": "Regler"
+  },
+  "actions": {
+    "save": "Gem",
+    "cancel": "Annuller",
+    "delete": "Slet",
+    "edit": "Rediger",
+    "confirm": "Bekræft",
+    "back": "Tilbage",
+    "next": "Næste",
+    "done": "Færdig",
+    "retry": "Prøv igen",
+    "close": "Luk",
+    "search": "Søg",
+    "filter": "Filtrer",
+    "refresh": "Opdater",
+    "viewAll": "Se alle",
+    "loadMore": "Indlæs mere",
+    "share": "Del",
+    "claim": "Tag opgave",
+    "start": "Start",
+    "complete": "Fuldfør"
+  },
+  "status": {
+    "active": "Aktiv",
+    "inactive": "Inaktiv",
+    "pending": "Afventer",
+    "completed": "Fuldført",
+    "cancelled": "Annulleret",
+    "expired": "Udløbet",
+    "draft": "Kladde",
+    "paused": "Pauseret",
+    "inProgress": "I gang",
+    "claimed": "Taget",
+    "verified": "Verificeret"
+  },
+  "time": {
+    "today": "I dag",
+    "yesterday": "I går",
+    "daysAgo": "{{count}} dage siden",
+    "hoursAgo": "{{count}} timer siden",
+    "minutesAgo": "{{count}} minutter siden",
+    "justNow": "Lige nu",
+    "daysLeft": "{{count}} dage tilbage",
+    "hoursLeft": "{{count}} timer tilbage",
+    "deadline": "Frist"
+  },
+  "empty": {
+    "noCampaigns": "Ingen kampagner endnu",
+    "noTasks": "Ingen opgaver tilgængelige",
+    "noWorkers": "Ingen plakatører fundet",
+    "noNotifications": "Ingen notifikationer",
+    "noResults": "Ingen resultater fundet"
+  },
+  "poster": {
+    "hang": "Ophæng",
+    "remove": "Nedtagning",
+    "hung": "Ophængt",
+    "removed": "Nedtaget",
+    "count": "{{count}} plakater",
+    "single": "1 plakat"
+  },
+  "currency": {
+    "dkk": "kr."
+  },
+  "feedback": {
+    "error": "Fejl",
+    "success": "Succes"
+  }
+}

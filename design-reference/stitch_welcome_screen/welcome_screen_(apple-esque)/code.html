@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="da"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#1a355b",
+              "background-light": "#FFFFFF",
+              "background-dark": "#13181f",
+              "whisper-border": "#F1F5F9",
+              "slate-gray": "#94A3B8"
+            },
+            fontFamily: {
+              "display": ["Public Sans", "sans-serif"]
+            },
+            borderRadius: {
+              "DEFAULT": "0.5rem",
+              "lg": "0.875rem", /* 14px as requested */
+              "xl": "1.5rem",
+              "full": "9999px"
+            },
+            boxShadow: {
+              'micro': '0 1px 3px 0 rgba(0, 0, 0, 0.02), 0 1px 2px -1px rgba(0, 0, 0, 0.02)',
+            }
+          },
+        },
+      }
+    </script>
+<title>PlakatPatruljen - Velkommen</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased text-[#1a355b]">
+<!-- Main Container -->
+<div class="relative flex min-h-screen w-full flex-col max-w-md mx-auto px-6 pt-4 pb-12 justify-between">
+<!-- Top Navigation -->
+<div class="flex justify-end items-center">
+<div class="inline-flex items-center px-3 py-1.5 rounded-full border border-whisper-border bg-white shadow-sm">
+<span class="text-[11px] font-semibold tracking-wider text-slate-gray">DK / EN</span>
+</div>
+</div>
+<!-- Header Section (Airy Whitespace) -->
+<div class="flex flex-col items-center text-center mt-12 mb-16">
+<div class="mb-4">
+<span class="material-symbols-outlined text-primary text-3xl font-light" data-icon="campaign">
+                    campaign
+                </span>
+</div>
+<h1 class="text-[26px] font-semibold leading-tight text-primary">
+                PlakatPatruljen
+            </h1>
+<p class="mt-2 text-[15px] font-normal text-slate-gray">
+                Din platform til valgplakater
+            </p>
+</div>
+<!-- Selection Cards Area -->
+<div class="flex flex-col gap-[14px] w-full mb-auto">
+<!-- Card 1: Organization -->
+<button class="flex items-center w-full p-5 bg-white border border-whisper-border rounded-lg shadow-micro text-left transition-all active:scale-[0.98] active:bg-gray-50 group">
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/5 mr-4">
+<span class="material-symbols-outlined text-primary text-[22px] font-light" data-icon="corporate_fare">
+                        corporate_fare
+                    </span>
+</div>
+<div class="flex-grow">
+<h3 class="text-[16px] font-medium text-primary">Parti eller organisation</h3>
+<p class="text-[13px] text-slate-gray font-normal mt-0.5">Opret kampagner og find hjælpere</p>
+</div>
+<span class="material-symbols-outlined text-slate-gray/50 text-[20px]" data-icon="chevron_right">
+                    chevron_right
+                </span>
+</button>
+<!-- Card 2: Helper -->
+<button class="flex items-center w-full p-5 bg-white border border-whisper-border rounded-lg shadow-micro text-left transition-all active:scale-[0.98] active:bg-gray-50 group">
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/5 mr-4">
+<span class="material-symbols-outlined text-primary text-[22px] font-light" data-icon="person_search">
+                        person_search
+                    </span>
+</div>
+<div class="flex-grow">
+<h3 class="text-[16px] font-medium text-primary">Jeg vil hjælpe</h3>
+<p class="text-[13px] text-slate-gray font-normal mt-0.5">Tjen penge på at hænge plakater op</p>
+</div>
+<span class="material-symbols-outlined text-slate-gray/50 text-[20px]" data-icon="chevron_right">
+                    chevron_right
+                </span>
+</button>
+</div>
+<!-- Footer Area -->
+<div class="mt-12 text-center">
+<p class="text-[14px] text-slate-gray">
+                Har du allerede en konto? 
+                <a class="text-primary font-medium ml-1 inline-block border-b border-primary/20 hover:border-primary transition-colors" href="#">
+                    Log ind
+                </a>
+</p>
+</div>
+</div>
+<!-- Background Decoration (Optional for that "Apple" feel, ultra-subtle) -->
+<div class="fixed top-0 left-0 w-full h-full -z-10 pointer-events-none opacity-[0.03]">
+<div class="absolute top-[-10%] right-[-10%] w-[50%] h-[40%] bg-primary rounded-full blur-[120px]"></div>
+</div>
+</body></html>

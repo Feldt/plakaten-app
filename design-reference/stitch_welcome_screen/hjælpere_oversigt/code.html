@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html lang="da"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1a355b",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#13181f",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Kampagnedetaljer - Hjælpere</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#101419] min-h-screen">
+<!-- Top Navigation / Header -->
+<div class="sticky top-0 z-20 bg-background-light dark:bg-background-dark border-b border-primary/10">
+<div class="flex items-center p-4 justify-between">
+<div class="text-primary flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-primary/10 cursor-pointer">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h2 class="text-primary text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-10">Kampagnedetaljer</h2>
+</div>
+<!-- Tabs -->
+<div class="flex border-b border-primary/10 px-4 gap-8">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-primary/60 pb-3 pt-2 hover:text-primary transition-colors" href="#">
+<p class="text-sm font-bold">Info</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-primary text-primary pb-3 pt-2" href="#">
+<p class="text-sm font-bold">Hjælpere</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-primary/60 pb-3 pt-2 hover:text-primary transition-colors" href="#">
+<p class="text-sm font-bold">Økonomi</p>
+</a>
+</div>
+</div>
+<!-- Summary Dashboard -->
+<div class="p-4 grid grid-cols-1 sm:grid-cols-3 gap-3">
+<div class="flex flex-col gap-1 rounded-xl p-4 bg-white shadow-sm border border-primary/5">
+<p class="text-primary/60 text-xs font-medium uppercase tracking-wider">Hjælpere</p>
+<p class="text-primary text-2xl font-bold">12</p>
+</div>
+<div class="flex flex-col gap-1 rounded-xl p-4 bg-white shadow-sm border border-primary/5">
+<p class="text-amber-600 text-xs font-medium uppercase tracking-wider">Afventer</p>
+<p class="text-primary text-2xl font-bold">4.230 kr.</p>
+</div>
+<div class="flex flex-col gap-1 rounded-xl p-4 bg-white shadow-sm border border-primary/5">
+<p class="text-emerald-600 text-xs font-medium uppercase tracking-wider">Afregnet</p>
+<p class="text-primary text-2xl font-bold">2.100 kr.</p>
+</div>
+</div>
+<!-- Search Bar -->
+<div class="px-4 py-2">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-4 text-primary/40">search</span>
+<input class="w-full bg-white border border-primary/10 rounded-xl py-3 pl-12 pr-4 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-primary/30" placeholder="Søg efter hjælper..." value=""/>
+</div>
+</div>
+<!-- Worker List -->
+<div class="p-4 space-y-3">
+<!-- Worker Card 1 -->
+<div class="bg-white rounded-xl p-4 border border-primary/5 shadow-sm">
+<div class="flex items-center gap-3 mb-4">
+<img alt="Anders Nielsen avatar" class="size-12 rounded-full object-cover ring-2 ring-primary/5" data-alt="Portrait of a friendly smiling man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4CQEY1YYNImEEQM0Hbw1N2TTu7uow-UpuwE-pbwd3yLpD1lj5olYd0wa0oV_ornNAMDz21R29pawl8dWB9sjFH2o4ZXUl659lpYrHzpoQrdDRzmyp7yRgSJmNm0MgJ-rQTXClRbIgcXnNijfJarTKr84Td2ak7KNn5YW7E9B5wMdu1WWYIu0OFDzgUO3A-XdOJENjtJkBtFRAYvriNgHHJ3L_1UAwTTIhQLQYdHfJru_TMx36qrq517pIGHTUyq_7vxQsY6wg_kk"/>
+<div class="flex-1">
+<h3 class="font-bold text-primary">Anders Nielsen</h3>
+<div class="flex items-center gap-2">
+<span class="bg-amber-100 text-amber-700 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Afventer</span>
+<span class="text-primary/60 text-sm font-medium">420 kr.</span>
+</div>
+</div>
+<button class="bg-primary text-white text-sm font-bold px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors">
+                    Markér som betalt
+                </button>
+</div>
+<div class="space-y-1.5">
+<div class="flex justify-between text-xs font-medium text-primary/60">
+<span>Opgaver fuldført</span>
+<span>28 / 30</span>
+</div>
+<div class="w-full bg-primary/10 h-2.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 93%"></div>
+</div>
+</div>
+</div>
+<!-- Worker Card 2 -->
+<div class="bg-white rounded-xl p-4 border border-primary/5 shadow-sm opacity-90">
+<div class="flex items-center gap-3 mb-4">
+<img alt="Mette Jensen avatar" class="size-12 rounded-full object-cover ring-2 ring-primary/5" data-alt="Professional portrait of a young woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAosEEelgvI_SoWpuhFvz_k3nzqtF_6zJY0SS3mpOWf31HhCVjSBIeJO6KZBVK4xGpOY1mZS8svXdibkPZqPxgvBRAJtrnlkHrM7qyCdIkKwhtdA-5tfTOoIe5jEVGTNEMntDhZzFLlLP6Xo8tQWPamVMyK5-w-xMzeJgAhGEF8n7oLju0O5l59U-4FIsL7G5BL1sHqilhOdeubbWE4oAAYdtJMg8H_HgwLtb5-OXgLMyI1uRslSnXImnyhoy8lGXrB0g46AXg2PVA"/>
+<div class="flex-1">
+<h3 class="font-bold text-primary">Mette Jensen</h3>
+<div class="flex items-center gap-2">
+<span class="bg-emerald-100 text-emerald-700 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Afregnet</span>
+<span class="text-primary/40 text-sm font-medium line-through">650 kr.</span>
+</div>
+</div>
+<div class="text-emerald-600 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm font-bold">check_circle</span>
+<span class="text-xs font-bold uppercase">Betalt</span>
+</div>
+</div>
+<div class="space-y-1.5">
+<div class="flex justify-between text-xs font-medium text-primary/60">
+<span>Opgaver fuldført</span>
+<span>30 / 30</span>
+</div>
+<div class="w-full bg-emerald-100 h-2.5 rounded-full overflow-hidden">
+<div class="bg-emerald-500 h-full rounded-full" style="width: 100%"></div>
+</div>
+</div>
+</div>
+<!-- Worker Card 3 -->
+<div class="bg-white rounded-xl p-4 border border-primary/5 shadow-sm">
+<div class="flex items-center gap-3 mb-4">
+<img alt="Thomas Berg avatar" class="size-12 rounded-full object-cover ring-2 ring-primary/5" data-alt="Portrait of a man with glasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIK5KTfBGXa7GmvdBxBQ1n0ftTlTQDlPelfdgpieTMqdR785D-J17XkaP7ZM9tBp_pFRYRFvHzgUle6S55gt_BpeslTZ-GJrZ95vapZcy-KvsD5blCgeAx4tQv83L6EtnxfHi2NGDosxwndnQcuhTaQwxNKnsKQL9srLJQ1ROdL48NwhGF1F_jP5QMa3p2ztncRJfek1W5KE3_My7W9fsFqvp-jc1L_lLh5TsavzjuzgmU5WvxmeUWBaXPwaCRwuVqgJNtBkJwrlE"/>
+<div class="flex-1">
+<h3 class="font-bold text-primary">Thomas Berg</h3>
+<div class="flex items-center gap-2">
+<span class="bg-amber-100 text-amber-700 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Afventer</span>
+<span class="text-primary/60 text-sm font-medium">1.100 kr.</span>
+</div>
+</div>
+<button class="bg-primary text-white text-sm font-bold px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors">
+                    Markér som betalt
+                </button>
+</div>
+<div class="space-y-1.5">
+<div class="flex justify-between text-xs font-medium text-primary/60">
+<span>Opgaver fuldført</span>
+<span>12 / 30</span>
+</div>
+<div class="w-full bg-primary/10 h-2.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 40%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation -->
+<div class="fixed bottom-0 left-0 right-0 bg-white border-t border-primary/10 px-4 pb-6 pt-2 flex items-center justify-around z-30">
+<a class="flex flex-col items-center gap-1 text-primary/40" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-[10px] font-medium">Hjem</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">flag</span>
+<p class="text-[10px] font-bold">Kampagner</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary/40" href="#">
+<span class="material-symbols-outlined">chat_bubble</span>
+<p class="text-[10px] font-medium">Beskeder</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary/40" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<p class="text-[10px] font-medium">Profil</p>
+</a>
+</div>
+<!-- Spacing for bottom nav -->
+<div class="h-24"></div>
+</body></html>

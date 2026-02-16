@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html lang="da"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>WORKER — Profil</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#1a355b",
+              "background-light": "#f6f7f8",
+              "background-dark": "#13181f",
+            },
+            fontFamily: {
+              "display": ["Public Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-icon {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-profile-gradient {
+            background: linear-gradient(180deg, #ffffff 0%, #f0f4f8 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex min-h-screen w-full flex-col bg-profile-gradient overflow-x-hidden pb-24">
+<!-- Header -->
+<div class="flex items-center p-4 justify-between sticky top-0 bg-white/80 backdrop-blur-md z-10 border-b border-primary/5">
+<div class="text-primary flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-primary/5 cursor-pointer">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h1 class="text-primary text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-10 uppercase">WORKER — Profil</h1>
+</div>
+<!-- Avatar Section -->
+<div class="flex flex-col items-center py-8 px-4">
+<div class="relative group">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-20 w-20 border-4 border-white shadow-lg mb-4" data-alt="Portrait of Erik Hansen smiling" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCYxVmnr4cO5rDfc__I3zyM-NpB727XVMwdBLHfDakHjpze9mPb8G_7DMYh2Jl3xWGQ6D06zVIfAXBEpPDRA27jZcTUZunAzcYA2OBGPV1HkmjViBFpb0RpSlZENE8a_eJmmo5_5TqNxrQJVfdq76IXuEiBJHh3nqGgSIUW0DBfJfA48SNfkc6ApiKpFR41RqyMsQgEoqAdavYsEBhhwgkBirQYFAqb8lYbovv_26fEwfhFa8LeOFh_M-wj3lVZmlYW_klYKDBF85E");'>
+</div>
+<div class="absolute bottom-4 right-0 bg-primary text-white p-1 rounded-full border-2 border-white">
+<span class="material-symbols-outlined text-xs">edit</span>
+</div>
+</div>
+<div class="flex flex-col items-center text-center">
+<h2 class="text-primary text-2xl font-bold leading-tight tracking-tight">Erik Hansen</h2>
+<p class="text-slate-500 text-sm font-medium">Medlem siden feb. 2024</p>
+</div>
+</div>
+<!-- Stats Row -->
+<div class="flex gap-3 px-4 mb-8 overflow-x-auto no-scrollbar">
+<div class="flex min-w-[110px] flex-1 flex-col items-center justify-center gap-1 rounded-lg bg-white p-4 shadow-sm border border-slate-100">
+<p class="text-primary tracking-tight text-xl font-bold">165</p>
+<p class="text-slate-400 text-[10px] font-bold uppercase tracking-wider">plakater</p>
+</div>
+<div class="flex min-w-[110px] flex-1 flex-col items-center justify-center gap-1 rounded-lg bg-white p-4 shadow-sm border border-slate-100">
+<p class="text-primary tracking-tight text-xl font-bold">3</p>
+<p class="text-slate-400 text-[10px] font-bold uppercase tracking-wider">kampagner</p>
+</div>
+<div class="flex min-w-[110px] flex-1 flex-col items-center justify-center gap-1 rounded-lg bg-white p-4 shadow-sm border border-slate-100">
+<p class="text-primary tracking-tight text-xl font-bold">2.475 kr.</p>
+<p class="text-slate-400 text-[10px] font-bold uppercase tracking-wider">indtjening</p>
+</div>
+</div>
+<!-- Profile Sections -->
+<div class="flex flex-col gap-8 px-4">
+<!-- Personal Information -->
+<section>
+<h3 class="text-slate-400 text-xs font-bold leading-tight tracking-[0.1em] px-1 pb-4 uppercase">Personlige oplysninger</h3>
+<div class="flex flex-col gap-3">
+<div class="bg-white rounded-lg p-4 flex flex-col border border-slate-100 shadow-sm">
+<label class="text-slate-400 text-[10px] font-bold uppercase">Navn</label>
+<p class="text-primary text-base font-medium">Erik Hansen</p>
+</div>
+<div class="bg-white rounded-lg p-4 flex flex-col border border-slate-100 shadow-sm">
+<label class="text-slate-400 text-[10px] font-bold uppercase">E-mail</label>
+<p class="text-primary text-base font-medium">erik.hansen@example.dk</p>
+</div>
+<div class="bg-white rounded-lg p-4 flex flex-col border border-slate-100 shadow-sm">
+<label class="text-slate-400 text-[10px] font-bold uppercase">Telefon</label>
+<p class="text-primary text-base font-medium">+45 20 30 40 50</p>
+</div>
+</div>
+</section>
+<!-- Language -->
+<section>
+<h3 class="text-slate-400 text-xs font-bold leading-tight tracking-[0.1em] px-1 pb-4 uppercase">Sprog</h3>
+<div class="bg-white rounded-lg p-1 flex border border-slate-100 shadow-sm">
+<button class="flex-1 py-2 rounded-md bg-primary text-white font-bold text-sm">Dansk (DK)</button>
+<button class="flex-1 py-2 rounded-md bg-transparent text-slate-400 font-bold text-sm">English (EN)</button>
+</div>
+</section>
+<!-- Notifications -->
+<section>
+<h3 class="text-slate-400 text-xs font-bold leading-tight tracking-[0.1em] px-1 pb-4 uppercase">Notifikationer</h3>
+<div class="bg-white rounded-lg border border-slate-100 shadow-sm overflow-hidden">
+<div class="flex items-center justify-between p-4 border-b border-slate-50">
+<p class="text-primary text-sm font-medium">Nye kampagner</p>
+<div class="w-10 h-6 bg-primary rounded-full relative">
+<div class="absolute right-1 top-1 w-4 h-4 bg-white rounded-full"></div>
+</div>
+</div>
+<div class="flex items-center justify-between p-4 border-b border-slate-50">
+<p class="text-primary text-sm font-medium">Beskeder fra admin</p>
+<div class="w-10 h-6 bg-primary rounded-full relative">
+<div class="absolute right-1 top-1 w-4 h-4 bg-white rounded-full"></div>
+</div>
+</div>
+<div class="flex items-center justify-between p-4">
+<p class="text-primary text-sm font-medium">Udbetalingsbekræftelser</p>
+<div class="w-10 h-6 bg-slate-200 rounded-full relative">
+<div class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Account Actions -->
+<section class="pb-8">
+<h3 class="text-slate-400 text-xs font-bold leading-tight tracking-[0.1em] px-1 pb-4 uppercase">Konto</h3>
+<div class="flex flex-col gap-6 items-center">
+<button class="w-full py-4 rounded-lg border-2 border-primary text-primary font-bold text-base hover:bg-primary hover:text-white transition-colors">
+                        Log ud
+                    </button>
+<a class="text-red-500 text-sm font-bold hover:underline" href="#">Slet konto</a>
+</div>
+</section>
+</div>
+<!-- Bottom Navigation -->
+<div class="fixed bottom-0 left-0 right-0 border-t border-slate-200 bg-white/90 backdrop-blur-lg px-4 pb-6 pt-3 flex items-center justify-between z-20">
+<a class="flex flex-1 flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined text-[24px]">home</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Hjem</p>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined text-[24px]">assignment</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Opgaver</p>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined text-[24px]">chat_bubble</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Beskeder</p>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined active-icon text-[24px]">person</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Profil</p>
+</a>
+</div>
+</div>
+</body></html>

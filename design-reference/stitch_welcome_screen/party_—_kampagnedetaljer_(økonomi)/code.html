@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html lang="da"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kampagnedetaljer - Økonomi</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1a355b",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#13181f",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen text-slate-900">
+<div class="max-w-md mx-auto bg-white dark:bg-slate-900 min-h-screen flex flex-col shadow-xl">
+<!-- Header -->
+<div class="flex items-center p-4 border-b border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 sticky top-0 z-10">
+<button class="p-2 -ml-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-full transition-colors">
+<span class="material-symbols-outlined text-primary dark:text-white">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold text-primary dark:text-white ml-2">PARTY — Kampagnedetaljer</h1>
+</div>
+<!-- Tabs -->
+<div class="bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800">
+<div class="flex px-4 gap-6">
+<a class="py-4 text-sm font-semibold text-slate-400 border-b-2 border-transparent" href="#">Info</a>
+<a class="py-4 text-sm font-semibold text-slate-400 border-b-2 border-transparent" href="#">Plakater</a>
+<a class="py-4 text-sm font-semibold text-primary dark:text-white border-b-2 border-primary" href="#">Økonomi</a>
+</div>
+</div>
+<main class="flex-1 p-4 space-y-6">
+<!-- Budget Overview Card -->
+<div class="bg-white dark:bg-slate-800 rounded-xl p-5 shadow-sm border border-slate-100 dark:border-slate-700">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h2 class="text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Samlet Budget</h2>
+<p class="text-2xl font-bold text-primary dark:text-white">5.000 kr.</p>
+</div>
+<div class="text-right">
+<span class="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded-full dark:text-white dark:bg-primary/40">90% brugt</span>
+</div>
+</div>
+<div class="space-y-2">
+<div class="w-full bg-slate-100 dark:bg-slate-700 h-3 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 90%;"></div>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-slate-600 dark:text-slate-400 font-medium">Brugt: 4.500 kr.</span>
+<span class="text-primary dark:text-white font-bold">500 kr. tilbage</span>
+</div>
+</div>
+</div>
+<!-- Pending Payments Section -->
+<div class="space-y-4">
+<h3 class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest px-1">Afventer betaling</h3>
+<div class="space-y-3">
+<!-- Worker Row 1 -->
+<div class="bg-white dark:bg-slate-800 rounded-lg p-4 border border-slate-100 dark:border-slate-700 flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-slate-200 overflow-hidden">
+<img alt="Avatar" class="w-full h-full object-cover" data-alt="Portrait of a young male worker" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoF7_TX3bv68e2QbKMxzVNIuQHy7HVfFtTlhvX9gViyTgnxbVka4I3SwYXSEz_EdjOMF-TITXu8Rp-YJA2f8vivm1dVv_C4SLqOkRFIJWkbnd8dZ9D1niFSHHpPP99NgjY4ukl3vz_Q8z096dFju7wvMGM3KuEMk9WUcCEmAz-wvKM2xhzOxilvDQHhoSPF70CQfTB4anrKHPplN3aDx3W9ZvwIfNuQLuwsMvc11SROFuJxCriDrjF-k43gOAMwLDVBBx8_Qn0sIs"/>
+</div>
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-white">Mads Nielsen</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">120 plakater opsat</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold text-primary dark:text-white">1.200 kr.</p>
+<span class="inline-flex items-center rounded-md bg-amber-50 px-2 py-1 text-xs font-medium text-amber-700 ring-1 ring-inset ring-amber-600/20">Afventer</span>
+</div>
+</div>
+<button class="w-full py-2 border border-primary text-primary text-xs font-bold rounded-lg hover:bg-primary/5 transition-colors dark:border-primary/50 dark:text-primary-100">
+                            Markér som betalt
+                        </button>
+</div>
+<!-- Worker Row 2 -->
+<div class="bg-white dark:bg-slate-800 rounded-lg p-4 border border-slate-100 dark:border-slate-700 flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-slate-200 overflow-hidden">
+<img alt="Avatar" class="w-full h-full object-cover" data-alt="Portrait of a smiling female worker" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAToUMGKfm0Ed5D0DgJUYe3w3i-OV3-apT0wl2pbxXtYmB5j3zmNvd1EOFr1dPUiA2EyMhS1Hr-gtZG-sZ0yHxH3mgabn_Vfxwz--uHWXR5JvCXOuxFehrggmyd47BpQxKUZjzbOR8N_HtlhRaCaXB-4TBrxYWYF562lKOZ8scDQQngSxMjnPpHc0CIf-8tXum66OYPBX_HNLdoTEM2BbZEgStfBsvIogpcM29IFi0gHmjz8twWmuSt-Q09A1Rv4LJhYl7DBZbS3vw"/>
+</div>
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-white">Sofie Jensen</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">85 plakater opsat</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold text-primary dark:text-white">850 kr.</p>
+<span class="inline-flex items-center rounded-md bg-amber-50 px-2 py-1 text-xs font-medium text-amber-700 ring-1 ring-inset ring-amber-600/20">Afventer</span>
+</div>
+</div>
+<button class="w-full py-2 border border-primary text-primary text-xs font-bold rounded-lg hover:bg-primary/5 transition-colors dark:border-primary/50 dark:text-primary-100">
+                            Markér som betalt
+                        </button>
+</div>
+<!-- Worker Row 3 -->
+<div class="bg-white dark:bg-slate-800 rounded-lg p-4 border border-slate-100 dark:border-slate-700 flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-slate-200 overflow-hidden">
+<img alt="Avatar" class="w-full h-full object-cover" data-alt="Portrait of a middle aged male worker" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMPmU9t3thyd_b11l-cdjRFOvSLGBZ7AqFwVsk3u2V2oNnUe9cx6pB8dJSQlR_2FiP_AHiD3HWIm8iZQ5lmu7KwVcIotakaChsMk_Yyu5DafAETeBx2nhkmhs2YfePIv0Lgiqo4NaMsU3MjrjfvfQWc5UyhHdhY-H0Nl17_8Vmmv_ej_VHI9ZJsrefpDNoFU9c5kIX-7TqpcO3HfivahETe7bpk9D7wWqwuOW2vhvl5JdR-Z0mvDkBNNtrdSynR2fCb8B8Zv86urw"/>
+</div>
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-white">Lars Mikkelsen</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">45 plakater opsat</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold text-primary dark:text-white">450 kr.</p>
+<span class="inline-flex items-center rounded-md bg-amber-50 px-2 py-1 text-xs font-medium text-amber-700 ring-1 ring-inset ring-amber-600/20">Afventer</span>
+</div>
+</div>
+<button class="w-full py-2 border border-primary text-primary text-xs font-bold rounded-lg hover:bg-primary/5 transition-colors dark:border-primary/50 dark:text-primary-100">
+                            Markér som betalt
+                        </button>
+</div>
+</div>
+</div>
+<!-- Export Button -->
+<div class="pt-4 pb-12">
+<button class="w-full flex items-center justify-center gap-2 py-3 border border-slate-300 dark:border-slate-600 text-slate-600 dark:text-slate-300 text-sm font-semibold rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-[20px]">download</span>
+                    Eksportér til CSV
+                </button>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<div class="border-t border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 pb-6 pt-2 sticky bottom-0">
+<div class="flex justify-between items-center max-w-sm mx-auto">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">campaign</span>
+<span class="text-[10px] font-bold">Kampagner</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">map</span>
+<span class="text-[10px] font-medium">Kort</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="text-[10px] font-medium">Team</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Profil</span>
+</a>
+</div>
+</div>
+</div>
+</body></html>

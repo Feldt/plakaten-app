@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html lang="da"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1a355b",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#13181f",
+                        "success": "#07883b",
+                        "error": "#d32f2f"
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<title>PlakatPatruljen - Kampagnedetaljer</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-primary antialiased">
+<!-- Main Map Background -->
+<div class="relative h-screen w-full overflow-hidden">
+<div class="absolute inset-0 z-0 bg-cover bg-center grayscale opacity-60" data-alt="Detailed city map showing distribution zones" data-location="Copenhagen, Denmark" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDv_L8BmUkaaDcaY-zlQWAzZ3H-nuQFHcwK0yWWMUHPGPV37U9-k2YQzp8B-VJSmcJw77TgNn65__BKYebsivAJaI3eOKIiCuCHLMuo3En7BmWwcKH8XxFXY8Q4D2aFllHDc1NoykyfafUDIpkkLfqgzNXjgJ8FNZtEyvoQrZeexs2eL-7hXVke7f2Wsy6TZMpWVWjSjk6rwrFtbCLQWNrxZInPc7EbnunWUBNeVfvzduiZmUoZk0McEsbXFpmKjKWxto0pa_Ut4tU');">
+</div>
+<!-- Bottom Sheet Overlay Container -->
+<div class="absolute inset-0 z-10 bg-black/20 flex flex-col justify-end">
+<!-- Bottom Sheet -->
+<div class="bg-white dark:bg-background-dark w-full max-h-[92%] rounded-t-xl shadow-2xl overflow-y-auto flex flex-col">
+<!-- Drag Handle -->
+<div class="flex justify-center py-3 sticky top-0 bg-white dark:bg-background-dark z-20">
+<div class="w-12 h-1.5 bg-gray-300 dark:bg-gray-700 rounded-full"></div>
+</div>
+<div class="px-6 pb-24 space-y-6">
+<!-- Header Section -->
+<div class="flex items-start justify-between gap-4">
+<div class="flex gap-4">
+<div class="h-16 w-16 rounded-full bg-cover bg-center border border-gray-100 shadow-sm shrink-0" data-alt="Socialdemokratiet party logo" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCyc3zv4coeKu_EnZzrw5P73PaL6v_jrJHw-JgjFbBSBUoMtozq9jJj-97m5mWaU-n63wywzDXa8NqqIFcgpknmkWSkOaWojJSvDlAb8f6NeCLAgwnyYNFiSGQ8oZ7pGmBYVBCk2zs1g4KuUggC7hxwZF0moeDJl84jY4o11E_8h6qQC2IBkzBdfoGb8bAZ6uuoO17YVTTErylmbEmpFqn0ah5lQQMwhCSfE_TCit-ElTkQY_JYK1PKmArhoNr_bEl4Fk8_tBbxkq4');">
+</div>
+<div class="flex flex-col">
+<h1 class="text-2xl font-bold tracking-tight text-primary dark:text-white">Socialdemokratiet</h1>
+<p class="text-gray-500 dark:text-gray-400 font-medium">Folketingsvalg 2024</p>
+</div>
+</div>
+<div class="text-right">
+<span class="block text-2xl font-bold text-primary dark:text-white">15 kr.</span>
+<span class="text-sm text-gray-500 dark:text-gray-400">per plakat</span>
+</div>
+</div>
+<!-- Status and Date -->
+<div class="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-800/50 rounded-lg border border-gray-100 dark:border-gray-700">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary dark:text-blue-400">calendar_today</span>
+<div>
+<p class="text-sm font-semibold dark:text-white">1. okt - 14. okt</p>
+<p class="text-xs text-gray-500 dark:text-gray-400">Booking periode</p>
+</div>
+</div>
+<div class="flex items-center gap-2 px-3 py-1 bg-success/10 text-success rounded-full border border-success/20">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-success opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-success"></span>
+</span>
+<span class="text-xs font-bold uppercase tracking-wider">Aktiv nu</span>
+</div>
+</div>
+<!-- Zone Preview Box -->
+<div class="space-y-3">
+<h3 class="text-sm font-bold uppercase tracking-widest text-gray-400">Arbejdszone</h3>
+<div class="relative h-32 w-full rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700 bg-gray-100">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Mini map showing a highlighted rectangular zone in a city" data-location="Roskilde Central" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAc6EpKQSK5lsLBdh2KFiAjYUSxXNlj48j_fKmZbkamwOq-cLIaa3e3LMnFJ50SvkjVbtKWRCkmmCB8I16hz64HrH70uVdFlU3n93q-M-02Knd1wj_BnjJBySFl7dKkBTmSmxVFmhys2qUYUEgLwcuT1I51MaDXeMzxKwh5Cxxppb7rk7GdevbEv549zU6Ip7shy8QJ9E6TlaZgCK2ktBdi5H0HVPKgVwsd7cRaluuddb9mRAGvDlVo3np_JjTEREqu-C1Uu8G9CHQ');">
+</div>
+<div class="absolute inset-0 bg-primary/10 flex items-center justify-center">
+<span class="bg-white/90 dark:bg-primary/90 px-3 py-1 rounded-full text-xs font-bold shadow-sm">Zone: Roskilde Midtby</span>
+</div>
+</div>
+</div>
+<!-- Pickup Location -->
+<div class="space-y-3">
+<h3 class="text-sm font-bold uppercase tracking-widest text-gray-400">Afhentning af materialer</h3>
+<div class="flex items-center gap-4 p-4 rounded-lg border border-gray-100 dark:border-gray-700 shadow-sm bg-white dark:bg-gray-800">
+<div class="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary dark:text-blue-400">location_on</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-bold truncate dark:text-white">Københavnsvej 12</p>
+<p class="text-xs text-gray-500 dark:text-gray-400">4000 Roskilde</p>
+</div>
+<button class="flex items-center gap-1 text-primary dark:text-blue-400 font-bold text-sm hover:underline shrink-0">
+<span class="material-symbols-outlined text-sm">directions</span>
+                                Rute
+                            </button>
+</div>
+</div>
+<!-- Earnings Calculator -->
+<div class="space-y-4 p-5 bg-primary/5 dark:bg-primary/20 rounded-xl border border-primary/10">
+<div class="flex justify-between items-end">
+<h3 class="text-sm font-bold text-primary dark:text-blue-200 uppercase tracking-widest">Indtjeningsberegner</h3>
+<div class="text-right">
+<span class="text-3xl font-black text-primary dark:text-white">375 kr.</span>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-medium text-gray-500 dark:text-gray-400">
+<span>25 plakater</span>
+<span>× 15 kr.</span>
+</div>
+<input class="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-primary" max="100" min="0" type="range" value="25"/>
+</div>
+</div>
+<!-- Rules Summary -->
+<div class="space-y-3">
+<h3 class="text-sm font-bold uppercase tracking-widest text-gray-400">Regler for ophængning</h3>
+<div class="divide-y divide-gray-100 dark:divide-gray-800 border border-gray-100 dark:border-gray-800 rounded-lg overflow-hidden">
+<!-- Rule 1 -->
+<div class="flex items-center justify-between p-4 bg-white dark:bg-background-dark">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-success">check_circle</span>
+<span class="text-sm font-medium dark:text-white">Minimum højde: 2.3 meter</span>
+</div>
+<span class="material-symbols-outlined text-gray-400 text-sm">expand_more</span>
+</div>
+<!-- Rule 2 -->
+<div class="flex items-center justify-between p-4 bg-white dark:bg-background-dark">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-success">check_circle</span>
+<span class="text-sm font-medium dark:text-white">Brug kun de udleverede strips</span>
+</div>
+<span class="material-symbols-outlined text-gray-400 text-sm">expand_more</span>
+</div>
+<!-- Rule 3 -->
+<div class="flex items-center justify-between p-4 bg-white dark:bg-background-dark">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-error">cancel</span>
+<span class="text-sm font-medium dark:text-white">Ingen ophæng ved lyskryds</span>
+</div>
+<span class="material-symbols-outlined text-gray-400 text-sm">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Sticky CTA Footer -->
+<div class="fixed bottom-0 left-0 right-0 p-4 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-t border-gray-100 dark:border-gray-800 z-30">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-lg shadow-lg flex items-center justify-center gap-2 transition-transform active:scale-[0.98]">
+<span class="material-symbols-outlined">bookmark_add</span>
+                        Reservér plakater
+                    </button>
+<!-- Home Indicator Spacing -->
+<div class="h-4"></div>
+</div>
+</div>
+</div>
+<!-- Floating Map Controls (Partially hidden or styled back) -->
+<div class="absolute top-6 right-4 flex flex-col gap-2 z-0 opacity-40 pointer-events-none">
+<button class="w-10 h-10 bg-white rounded-lg shadow-md flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">add</span>
+</button>
+<button class="w-10 h-10 bg-white rounded-lg shadow-md flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">remove</span>
+</button>
+<button class="w-10 h-10 bg-white rounded-lg shadow-md flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">my_location</span>
+</button>
+</div>
+</div>
+</body></html>

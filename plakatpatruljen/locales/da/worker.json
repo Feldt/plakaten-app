@@ -1,0 +1,55 @@
+{
+  "map": {
+    "myLocation": "Min placering",
+    "noActiveCampaigns": "Ingen aktive kampagner i dit område",
+    "locationPermissionNeeded": "Placeringstilladelse er nødvendig for at vise kortet",
+    "openSettings": "Åbn indstillinger"
+  },
+  "campaign": {
+    "perPoster": "{{amount}} kr./plakat",
+    "available": "{{count}} plakater tilgængelige",
+    "awayDistance": "{{distance}} væk",
+    "seeDetails": "Se detaljer",
+    "activeNow": "Aktiv nu",
+    "startsIn": "Starter om {{days}} dage",
+    "ended": "Afsluttet",
+    "allowedPeriod": "Tilladt periode",
+    "getDirections": "Få rutevejledning",
+    "claimPosters": "Tag plakater",
+    "howMany": "Hvor mange plakater vil du tage?",
+    "confirmClaim": "Bekræft {{count}} plakater",
+    "claimSuccess": "Du har taget {{count}} plakater!",
+    "goToTasks": "Gå til opgaver",
+    "youClaimed": "Du har taget {{count}} plakater",
+    "earningsPreview": "Forventet indtjening",
+    "rulesTitle": "Regler",
+    "seeAllRules": "Se alle regler",
+    "specialInstructions": "Særlige instruktioner",
+    "pickupLocations": "Afhentningsteder"
+  },
+  "earnings": {
+    "total": "Samlet indtjening",
+    "pendingPayment": "Afventer udbetaling",
+    "paid": "Udbetalt",
+    "postersHung": "Ophængte plakater",
+    "postersRemoved": "Nedtagne plakater",
+    "campaigns": "Kampagner",
+    "awaitingPayment": "Afventer betaling",
+    "paymentNote": "Udbetalinger sker inden for 14 dage efter kampagnens afslutning",
+    "byCampaign": "Fordelt på kampagner"
+  },
+  "profile": {
+    "memberSince": "Medlem siden {{date}}",
+    "editName": "Rediger navn",
+    "editEmail": "Rediger e-mail",
+    "language": "Sprog",
+    "notifications": "Notifikationer",
+    "pushNotifications": "Push-notifikationer",
+    "newCampaignAlerts": "Nye kampagner",
+    "paymentAlerts": "Betalingsnotifikationer",
+    "signOut": "Log ud",
+    "deleteAccount": "Slet konto",
+    "deleteWarning": "Dette vil permanent slette din konto og alle tilknyttede data. Denne handling kan ikke fortrydes.",
+    "changePhoto": "Skift foto"
+  }
+}

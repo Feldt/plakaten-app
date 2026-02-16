@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html lang="da"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1a355b",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#13181f",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Top Navigation / Header -->
+<header class="sticky top-0 z-10 bg-white dark:bg-background-dark border-b border-slate-200 dark:border-slate-800 px-4 py-3">
+<div class="flex items-center justify-between max-w-md mx-auto">
+<button class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors">
+<span class="material-symbols-outlined block">arrow_back</span>
+</button>
+<h2 class="text-lg font-bold tracking-tight">Trin 1 af 6</h2>
+<div class="w-10"></div> <!-- Spacer to center title -->
+</div>
+<!-- Step Indicator Dots -->
+<div class="flex w-full flex-row items-center justify-center gap-3 py-4">
+<div class="h-2.5 w-2.5 rounded-full bg-primary"></div>
+<div class="h-2 w-2 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+<div class="h-2 w-2 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+<div class="h-2 w-2 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+<div class="h-2 w-2 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+<div class="h-2 w-2 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+</div>
+</header>
+<!-- Main Content Container -->
+<main class="flex-1 flex flex-col w-full max-w-md mx-auto bg-white dark:bg-background-dark shadow-sm">
+<div class="px-6 pt-8 pb-4">
+<h1 class="text-2xl font-bold text-slate-900 dark:text-white mb-6">Grundlæggende info</h1>
+<div class="space-y-6">
+<!-- Campaign Name -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300" for="campaign-name">
+                        Kampagnenavn
+                    </label>
+<input class="w-full h-14 px-4 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary text-base transition-all" id="campaign-name" type="text" value="KV25 København"/>
+</div>
+<!-- Election Type -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300" for="election-type">
+                        Valgtype
+                    </label>
+<div class="relative">
+<select class="w-full h-14 px-4 pr-10 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary appearance-none text-base" id="election-type">
+<option value="kommunalvalg">Kommunalvalg</option>
+<option value="regionsvalg">Regionsvalg</option>
+<option value="folketingsvalg">Folketingsvalg</option>
+<option value="eu-valg">Europa-parlamentsvalg</option>
+</select>
+<div class="absolute inset-y-0 right-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-slate-500">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Election Date -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300" for="election-date">
+                        Valgdato
+                    </label>
+<div class="relative">
+<input class="w-full h-14 px-4 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary text-base" id="election-date" type="date" value="2025-11-18"/>
+</div>
+</div>
+<!-- Info Card -->
+<div class="bg-primary/5 dark:bg-primary/20 border border-primary/20 rounded-xl p-4 flex gap-3 mt-4">
+<span class="material-symbols-outlined text-primary shrink-0">info</span>
+<div class="flex flex-col gap-1">
+<p class="text-sm font-medium text-primary dark:text-primary/90">Tilladt opsætningsperiode:</p>
+<p class="text-sm font-semibold text-primary dark:text-primary/90">25. okt. kl. 12:00 — 26. nov. kl. 23:59</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Sticky Bottom Button Section -->
+<div class="mt-auto p-6 bg-white dark:bg-background-dark border-t border-slate-100 dark:border-slate-800">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold h-14 rounded-xl transition-colors flex items-center justify-center gap-2">
+                Næste
+                <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</main>
+<!-- Bottom Navigation Bar (Visual Placeholder as per components list) -->
+<nav class="sticky bottom-0 w-full max-w-md mx-auto bg-white dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 flex justify-around items-center py-2 px-4">
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Hjem</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">flag</span>
+<span class="text-[10px] font-medium">Kampagner</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">map</span>
+<span class="text-[10px] font-medium">Kort</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="text-[10px] font-medium">Profil</span>
+</a>
+</nav>
+</body></html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="da"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1a355b",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#13181f",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Public Sans", sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex flex-col items-center justify-center p-4">
+<div class="w-full max-w-[440px] bg-white dark:bg-background-dark/50 rounded-xl shadow-sm overflow-hidden p-6 md:p-8">
+<div class="mb-8">
+<h1 class="text-primary dark:text-white text-3xl font-bold tracking-tight">Log ind</h1>
+<p class="text-primary/60 dark:text-white/60 mt-2 text-sm">Velkommen tilbage. Venligst indtast dine oplysninger.</p>
+</div>
+<div class="flex p-1 bg-primary/5 dark:bg-white/5 rounded-lg mb-8">
+<button class="flex-1 flex items-center justify-center py-2.5 text-sm font-semibold rounded-md bg-white dark:bg-primary shadow-sm text-primary dark:text-white transition-all">
+                Telefon
+            </button>
+<button class="flex-1 flex items-center justify-center py-2.5 text-sm font-medium text-primary/60 dark:text-white/60 hover:text-primary dark:hover:text-white transition-all">
+                Email
+            </button>
+</div>
+<div class="space-y-6">
+<div class="space-y-2">
+<label class="text-sm font-semibold text-primary/80 dark:text-white/80 block">Telefonnummer</label>
+<div class="flex gap-3">
+<div class="relative w-24">
+<div class="absolute inset-y-0 left-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-primary/40 dark:text-white/40 text-lg">flag</span>
+</div>
+<input class="w-full pl-10 pr-3 py-3.5 bg-primary/5 dark:bg-white/5 border-transparent focus:border-primary focus:ring-1 focus:ring-primary rounded-lg text-primary dark:text-white font-medium text-sm transition-all" readonly="" type="text" value="+45"/>
+</div>
+<div class="relative flex-1">
+<input class="w-full px-4 py-3.5 bg-primary/5 dark:bg-white/5 border-transparent focus:border-primary focus:ring-1 focus:ring-primary rounded-lg text-primary dark:text-white placeholder:text-primary/30 dark:placeholder:text-white/30 font-medium text-sm transition-all" placeholder="12 34 56 78" type="tel"/>
+</div>
+</div>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-lg shadow-lg shadow-primary/20 transition-all flex items-center justify-center gap-2 group">
+<span>Send kode</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+<div class="mt-10 text-center">
+<p class="text-primary/60 dark:text-white/60 text-sm">
+                Har du ikke en konto? 
+                <a class="text-primary dark:text-white font-bold hover:underline ml-1" href="#">Opret dig her</a>
+</p>
+</div>
+<div class="mt-12 flex flex-col items-center gap-6">
+<div class="flex items-center gap-4 w-full">
+<div class="h-px flex-1 bg-primary/10 dark:bg-white/10"></div>
+<span class="text-xs font-bold text-primary/30 dark:text-white/30 uppercase tracking-widest">Eller log ind med</span>
+<div class="h-px flex-1 bg-primary/10 dark:bg-white/10"></div>
+</div>
+<div class="flex gap-4 w-full">
+<button class="flex-1 flex items-center justify-center py-3 border border-primary/10 dark:border-white/10 rounded-lg hover:bg-primary/5 dark:hover:bg-white/5 transition-colors">
+<img alt="Google logo" class="w-5 h-5" data-alt="Google logo icon colorful" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDfc-S7VnDWovgsNav7YQwOxlkppMYfBvskwS6KPepEfScNQTwaVh4cXHsOM8imIcnWAOpNCt-dYAzxYhsK63mEqMKVdrsDbhKuBc7FbW49eZYFLhsGeuMyH2OhaymPPoLRH1_G8OWbQuexqDvAUPN43nIRJ9mGTued8HIExRGuuzKNb_3MGAjVgjp5t-k6mrdEy2LrZkMBt2kwuaY9xe1LPtrdcpiqI6F1rSSTiwQYKl54i318TPvsCmkaWL8It1lJHoycMhu5bE"/>
+</button>
+<button class="flex-1 flex items-center justify-center py-3 border border-primary/10 dark:border-white/10 rounded-lg hover:bg-primary/5 dark:hover:bg-white/5 transition-colors">
+<span class="material-symbols-outlined text-primary dark:text-white">ios</span>
+</button>
+</div>
+</div>
+</div>
+<footer class="mt-8 text-primary/40 dark:text-white/30 text-xs flex gap-4">
+<a class="hover:text-primary dark:hover:text-white transition-colors" href="#">Privatlivspolitik</a>
+<span>•</span>
+<a class="hover:text-primary dark:hover:text-white transition-colors" href="#">Vilkår og betingelser</a>
+</footer>
+</body></html>

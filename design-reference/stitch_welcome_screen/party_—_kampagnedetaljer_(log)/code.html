@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html lang="da"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1a355b",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#13181f",
+                        "success": "#07883b",
+                        "warning": "#f59e0b",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<title>PARTY — Kampagnedetaljer (Log)</title>
+<style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen text-slate-900">
+<!-- Header Section -->
+<header class="sticky top-0 z-50 bg-white dark:bg-background-dark border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center p-4 gap-4">
+<button class="flex items-center justify-center text-primary dark:text-white">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold text-primary dark:text-white truncate">PARTY — Kampagnedetaljer (Log)</h1>
+</div>
+<!-- Navigation Tabs -->
+<nav class="flex px-4 border-b border-slate-100 dark:border-slate-800">
+<a class="relative py-3 px-4 text-sm font-bold text-primary dark:text-white border-b-2 border-primary" href="#">
+                Log
+            </a>
+<a class="py-3 px-4 text-sm font-bold text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
+                Detaljer
+            </a>
+</nav>
+<!-- Filter Chips Carousel -->
+<div class="flex gap-2 p-4 overflow-x-auto no-scrollbar bg-white dark:bg-background-dark">
+<button class="flex items-center justify-center h-9 px-5 rounded-full bg-primary text-white text-sm font-semibold whitespace-nowrap">
+                Alle
+            </button>
+<button class="flex items-center justify-center h-9 px-5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-sm font-medium whitespace-nowrap hover:bg-slate-200 transition-colors">
+                Verificeret
+            </button>
+<button class="flex items-center justify-center h-9 px-5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-sm font-medium whitespace-nowrap hover:bg-slate-200 transition-colors">
+                Markeret
+            </button>
+<button class="flex items-center justify-center h-9 px-5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-sm font-medium whitespace-nowrap hover:bg-slate-200 transition-colors">
+                Afvist
+            </button>
+</div>
+</header>
+<!-- Main Content List -->
+<main class="p-4 space-y-3 pb-24">
+<!-- Entry 1: Verified -->
+<div class="bg-white dark:bg-slate-900 rounded-lg p-4 shadow-sm border border-slate-100 dark:border-slate-800 flex items-start gap-4">
+<div class="size-16 rounded-lg bg-slate-200 dark:bg-slate-800 overflow-hidden flex-shrink-0">
+<img alt="Worker Mads Jensen" class="w-full h-full object-cover" data-alt="Portrait of a smiling professional man outdoors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiOFW_n9WN_aMj59Cx6vt9zWIQ9RBTatg6_q5_Ebe_YKGdowdJNi_-rAXqtgF0Mc5lPTN8ss_ad0GXb0gPrgZaejZOYuVl1LcD3FU7-_3H8C0xFkaClTvs1UtjsD-34jk9IA4GN9kN3eJ0M3T8aTuwvvU61KEJkw7XqyRkoDbfCFu26-roBhQThR7NMOFVyX9Z3q1-NhWVqbRUlp-7TLa7mwFml1er5SyA-iLJl2Hd_-i8hMA-9vObXuN0_wsy2XK1iuEZy0WG57M"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-primary dark:text-white truncate">Mads Jensen</h3>
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold tracking-wider uppercase bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400">
+                        VERIFICERET
+                    </span>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">12:45 • Gothersgade 12</p>
+<p class="text-xs text-slate-400 dark:text-slate-500">1123 KBH K</p>
+</div>
+</div>
+<!-- Entry 2: Marked -->
+<div class="bg-white dark:bg-slate-900 rounded-lg p-4 shadow-sm border border-slate-100 dark:border-slate-800 flex items-start gap-4">
+<div class="size-16 rounded-lg bg-slate-200 dark:bg-slate-800 overflow-hidden flex-shrink-0">
+<img alt="Worker Sofie Nielsen" class="w-full h-full object-cover" data-alt="Portrait of a young professional woman with glasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0UJEJaXCCa4mnjg7dwoIoqJXGAUDcLCR1Ps8kyFX3OEWAoLjnxFzK5f6KEBAlk_mm-GMRahP-W7QBqlsvExKQJ_1OG2hTAMHNlush3x3ZNLEXMchzWAihn9ApcLrgKE-qyh0fqL4RV6e1u18h09JdweGhQhPoDPmB1GXuxGd0iFuJDkQ-4Toc2fICa8wkO3dS2niKbPkxWNLyMky6bGJKlYXERe-BOCHQqw8bwv6UP3DAuEyLmFxaZ6OzDuvI9f-ia3hwlBhziDY"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-primary dark:text-white truncate">Sofie Nielsen</h3>
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold tracking-wider uppercase bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400">
+                        MARKERET
+                    </span>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">13:10 • Vesterbrogade 45</p>
+<p class="text-xs text-slate-400 dark:text-slate-500">1620 KBH V</p>
+</div>
+</div>
+<!-- Entry 3: Verified -->
+<div class="bg-white dark:bg-slate-900 rounded-lg p-4 shadow-sm border border-slate-100 dark:border-slate-800 flex items-start gap-4">
+<div class="size-16 rounded-lg bg-slate-200 dark:bg-slate-800 overflow-hidden flex-shrink-0">
+<img alt="Worker Jonas Berg" class="w-full h-full object-cover" data-alt="Portrait of a male field worker" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcL5IJyE2bKrQKJvsV5l3qCr-PufOZV9fO2xrmFA0HEOHnOsNWao9lSF0_3FfGbwMTa1MnF0Z_qRloUwjrL_P1rKf19SQYhie_PrTtKtsyDvTwlu57cptb7hKcoJxh_tHSc5PnxyYqoAph_7dA2tBdbqIjYxd7BUy3qo3bVEYKe_ZqAlYVH94atEntIvF8hbD4ZFmDYVWwOsbAzzCvCy2k5YA2yOUcrK5P58A6-vTo07yIPrIBrQAytZEFIcCCJG67KCJ8hBNVpn8"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-primary dark:text-white truncate">Jonas Berg</h3>
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold tracking-wider uppercase bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400">
+                        VERIFICERET
+                    </span>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">13:45 • Amagerbrogade 210</p>
+<p class="text-xs text-slate-400 dark:text-slate-500">2300 KBH S</p>
+</div>
+</div>
+<!-- Entry 4: Rejected -->
+<div class="bg-white dark:bg-slate-900 rounded-lg p-4 shadow-sm border border-slate-100 dark:border-slate-800 flex items-start gap-4 opacity-75">
+<div class="size-16 rounded-lg bg-slate-200 dark:bg-slate-800 overflow-hidden flex-shrink-0">
+<img alt="Worker Emma Holm" class="w-full h-full object-cover grayscale" data-alt="Portrait of a young professional woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwDg5dEddfvTskE_aUYBTciOPnEzXvgf3vzZCbXUCxsHKGntSJ02hiSMlH__G6-BfuCQvSXrdBjSKB7ltiXuhH0jNffbWwfjXG3OWZ7l_x2iAmna6spV5rACsNBhho0G5bkaeqSTTIXk-K28yxQxi5RvOKAYNNz9BtD3tcvRVtFbaSH_Y7Xzb-3nmCMpv-YCq5ZkC8LK-Ye_hmzfJBm1EWHLSdk3er89MHK3lvL-9BNv1Qq_79PebGBxPr1daLOkxdXU7eT7V84Uk"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-primary dark:text-white truncate">Emma Holm</h3>
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold tracking-wider uppercase bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-400">
+                        AFVIST
+                    </span>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">14:20 • Østerbrogade 92</p>
+<p class="text-xs text-slate-400 dark:text-slate-500">2100 KBH Ø</p>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 px-4 pb-6 pt-2 flex justify-between items-center z-50">
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-[10px] font-medium leading-none uppercase tracking-wide">Hjem</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">campaign</span>
+<p class="text-[10px] font-medium leading-none uppercase tracking-wide">Kampagner</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary dark:text-white" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">history</span>
+<p class="text-[10px] font-bold leading-none uppercase tracking-wide">Log</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<p class="text-[10px] font-medium leading-none uppercase tracking-wide">Profil</p>
+</a>
+</nav>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</body></html>

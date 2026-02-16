@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="da"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1a355b",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#13181f",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Opret Kampagne - Afhentningssteder</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark text-primary min-h-screen flex flex-col">
+<!-- Top Navigation / Header -->
+<header class="flex items-center bg-background-light dark:bg-background-dark p-4 border-b border-primary/10 sticky top-0 z-10">
+<button class="text-primary flex size-12 shrink-0 items-center justify-start focus:outline-none">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h2 class="text-primary text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12">Opret Kampagne</h2>
+</header>
+<main class="flex-1 overflow-y-auto px-4 pb-24">
+<!-- Progress Indicator -->
+<div class="flex w-full flex-row items-center justify-center gap-3 py-6">
+<div class="h-2 w-2 rounded-full bg-primary/30"></div>
+<div class="h-2 w-2 rounded-full bg-primary/30"></div>
+<div class="h-2 w-2 rounded-full bg-primary/30"></div>
+<div class="h-2 w-8 rounded-full bg-primary"></div>
+<div class="h-2 w-2 rounded-full bg-primary/20"></div>
+<div class="h-2 w-2 rounded-full bg-primary/20"></div>
+</div>
+<!-- Heading Section -->
+<div class="mb-6">
+<p class="text-primary/60 text-sm font-medium leading-normal mb-1">Trin 4 af 6</p>
+<h1 class="text-primary tracking-tight text-[28px] font-bold leading-tight">Afhentningssteder</h1>
+<p class="text-primary/70 text-base font-normal mt-2 leading-relaxed">
+                Vælg de steder, hvor frivillige eller vælgere kan afhente kampagnemateriale.
+            </p>
+</div>
+<!-- Location List -->
+<div class="space-y-4 mb-6">
+<!-- Location Card 1 -->
+<div class="bg-white dark:bg-primary/5 rounded-xl border border-primary/10 p-4 shadow-sm relative overflow-hidden group">
+<div class="flex gap-4">
+<div class="flex-shrink-0">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+</div>
+<div class="flex-1 pr-12">
+<h3 class="text-primary font-bold text-lg mb-1">Partikontoret Roskilde</h3>
+<p class="text-primary/70 text-sm mb-2">Køgevej 12, 4000 Roskilde</p>
+<div class="flex items-center gap-2 text-primary/60 text-xs font-medium">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span>Man-Fre 09:00 - 16:00</span>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="absolute top-4 right-4 flex flex-col gap-2">
+<button class="p-2 hover:bg-primary/10 rounded-full transition-colors text-primary/60 hover:text-primary">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="p-2 hover:bg-red-50 rounded-full transition-colors text-primary/60 hover:text-red-600">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+<!-- Mini Map Indicator Gradient Decoration -->
+<div class="absolute bottom-0 right-0 w-24 h-12 opacity-10 bg-gradient-to-tl from-primary to-transparent pointer-events-none"></div>
+</div>
+<!-- Add Location Button -->
+<button class="w-full flex items-center justify-center gap-2 py-6 border-2 border-dashed border-primary/30 rounded-xl bg-primary/5 text-primary font-semibold hover:bg-primary/10 transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined">add_circle</span>
+<span>Tilføj afhentningssted</span>
+</button>
+</div>
+<!-- Optional Map Placeholder -->
+<div class="rounded-xl overflow-hidden h-40 relative mb-8 border border-primary/10">
+<img alt="Kort over Roskilde" class="w-full h-full object-cover grayscale-[0.5] opacity-80" data-alt="Map view showing locations in Roskilde city" data-location="Roskilde" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6X4_Rz2g0mwGwpKFevCIAfofPUMYhoXVg9JvGgZwd9yqYqR9ebVLgsXzXSi4N-U1pC3NWi93ztDWcseRVp3q0OAZe3y2W5pygRYRlhA9QUrcZyFnSWNM-w8NudoHQHkpK1Oez29xecKOrc1rD7UNcy12lf_edETyyqTs91aGV-GN2ASJA2IlXajW9Ha7aLecUiUIOmIVpOO2xt0nTmPsQRx7cp45Bo-KSKELVtXHfhUhCfosbcTyGwRsNG35EqkUZXRnRxgDc8Zw"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="bg-primary text-white p-2 rounded-full shadow-lg">
+<span class="material-symbols-outlined">push_pin</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar & Action Button -->
+<div class="fixed bottom-0 w-full bg-background-light dark:bg-background-dark border-t border-primary/10 pt-4 pb-safe">
+<div class="px-4 mb-4">
+<button class="w-full bg-primary text-white py-4 rounded-xl font-bold text-lg shadow-lg hover:bg-primary/90 active:scale-[0.99] transition-all">
+                Næste
+            </button>
+</div>
+<nav class="flex justify-around items-center px-4 pb-4">
+<a class="flex flex-col items-center gap-1 text-primary/40" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-[10px] font-medium leading-none uppercase tracking-wider">Hjem</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">campaign</span>
+<p class="text-[10px] font-medium leading-none uppercase tracking-wider">Kampagner</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary/40" href="#">
+<span class="material-symbols-outlined">location_on</span>
+<p class="text-[10px] font-medium leading-none uppercase tracking-wider">Steder</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary/40" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-[10px] font-medium leading-none uppercase tracking-wider">Profil</p>
+</a>
+</nav>
+</div>
+</body></html>

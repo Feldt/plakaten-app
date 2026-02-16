@@ -1,0 +1,83 @@
+{
+  "app": {
+    "name": "PlakatPatruljen",
+    "tagline": "Election poster logistics made easy"
+  },
+  "navigation": {
+    "home": "Home",
+    "campaigns": "Campaigns",
+    "tasks": "Tasks",
+    "earnings": "Earnings",
+    "profile": "Profile",
+    "settings": "Settings",
+    "workers": "Workers",
+    "rules": "Rules"
+  },
+  "actions": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "confirm": "Confirm",
+    "back": "Back",
+    "next": "Next",
+    "done": "Done",
+    "retry": "Retry",
+    "close": "Close",
+    "search": "Search",
+    "filter": "Filter",
+    "refresh": "Refresh",
+    "viewAll": "View all",
+    "loadMore": "Load more",
+    "share": "Share",
+    "claim": "Claim task",
+    "start": "Start",
+    "complete": "Complete"
+  },
+  "status": {
+    "active": "Active",
+    "inactive": "Inactive",
+    "pending": "Pending",
+    "completed": "Completed",
+    "cancelled": "Cancelled",
+    "expired": "Expired",
+    "draft": "Draft",
+    "paused": "Paused",
+    "inProgress": "In progress",
+    "claimed": "Claimed",
+    "verified": "Verified"
+  },
+  "time": {
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "daysAgo": "{{count}} days ago",
+    "hoursAgo": "{{count}} hours ago",
+    "minutesAgo": "{{count}} minutes ago",
+    "justNow": "Just now",
+    "daysLeft": "{{count}} days left",
+    "hoursLeft": "{{count}} hours left",
+    "deadline": "Deadline"
+  },
+  "empty": {
+    "noCampaigns": "No campaigns yet",
+    "noTasks": "No tasks available",
+    "noWorkers": "No workers found",
+    "noNotifications": "No notifications",
+    "noResults": "No results found"
+  },
+  "poster": {
+    "hang": "Hang",
+    "remove": "Remove",
+    "hung": "Hung",
+    "removed": "Removed",
+    "count": "{{count}} posters",
+    "single": "1 poster"
+  },
+  "currency": {
+    "dkk": "DKK"
+  },
+  "feedback": {
+    "error": "Error",
+    "success": "Success"
+  }
+}

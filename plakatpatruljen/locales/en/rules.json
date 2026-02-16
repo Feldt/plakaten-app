@@ -1,0 +1,62 @@
+{
+  "title": "Election poster rules",
+  "subtitle": "Based on the Road Act §84",
+  "categories": {
+    "placement": "Placement",
+    "timing": "Timing",
+    "size": "Size",
+    "safety": "Safety",
+    "removal": "Removal"
+  },
+  "rules": {
+    "heightMinimum": {
+      "title": "Minimum height",
+      "description": "Posters must be hung at least 2.3 meters above the road surface."
+    },
+    "roadSafety": {
+      "title": "Road safety",
+      "description": "Posters must not obstruct road signs, signals, or otherwise compromise road safety."
+    },
+    "intersectionDistance": {
+      "title": "Distance from intersections",
+      "description": "Posters must not be hung closer than 10 meters from an intersection."
+    },
+    "posterSpacing": {
+      "title": "Poster spacing",
+      "description": "There must be at least 50 meters between posters from the same party."
+    },
+    "hangingPeriod": {
+      "title": "Hanging period",
+      "description": "Posters may be hung at the earliest on the 4th Saturday before election day."
+    },
+    "removalDeadline": {
+      "title": "Removal deadline",
+      "description": "Posters must be removed no later than 8 days after election day."
+    },
+    "privateProperty": {
+      "title": "Private property",
+      "description": "Posters may not be hung on private property without permission."
+    },
+    "contactInfo": {
+      "title": "Contact information",
+      "description": "All election posters must include the name, address, and phone number of the responsible person."
+    },
+    "motorwayProhibition": {
+      "title": "Motorway prohibition",
+      "description": "Posters may not be hung along motorways and express roads."
+    },
+    "maxSize": {
+      "title": "Maximum size",
+      "description": "Posters may not exceed 0.8 m² in area."
+    }
+  },
+  "violations": {
+    "warning": "Warning",
+    "error": "Error",
+    "heightTooLow": "Poster is too low. Minimum {{min}}m required.",
+    "tooCloseToIntersection": "Too close to intersection. Minimum {{min}}m required.",
+    "tooCloseToOtherPoster": "Too close to another poster. Minimum {{min}}m required.",
+    "outsideHangingPeriod": "Hanging is not allowed outside the hanging period.",
+    "motorwayNotAllowed": "Posters are prohibited along motorways."
+  }
+}

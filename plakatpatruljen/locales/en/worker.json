@@ -1,0 +1,55 @@
+{
+  "map": {
+    "myLocation": "My location",
+    "noActiveCampaigns": "No active campaigns in your area",
+    "locationPermissionNeeded": "Location permission is needed to show the map",
+    "openSettings": "Open Settings"
+  },
+  "campaign": {
+    "perPoster": "{{amount}} DKK/poster",
+    "available": "{{count}} posters available",
+    "awayDistance": "{{distance}} away",
+    "seeDetails": "See details",
+    "activeNow": "Active now",
+    "startsIn": "Starts in {{days}} days",
+    "ended": "Ended",
+    "allowedPeriod": "Allowed period",
+    "getDirections": "Get directions",
+    "claimPosters": "Claim posters",
+    "howMany": "How many posters do you want to claim?",
+    "confirmClaim": "Confirm {{count}} posters",
+    "claimSuccess": "You claimed {{count}} posters!",
+    "goToTasks": "Go to tasks",
+    "youClaimed": "You claimed {{count}} posters",
+    "earningsPreview": "Estimated earnings",
+    "rulesTitle": "Rules",
+    "seeAllRules": "See all rules",
+    "specialInstructions": "Special instructions",
+    "pickupLocations": "Pickup locations"
+  },
+  "earnings": {
+    "total": "Total earnings",
+    "pendingPayment": "Pending payment",
+    "paid": "Paid",
+    "postersHung": "Posters hung",
+    "postersRemoved": "Posters removed",
+    "campaigns": "Campaigns",
+    "awaitingPayment": "Awaiting payment",
+    "paymentNote": "Payments are processed within 14 days after campaign completion",
+    "byCampaign": "By campaign"
+  },
+  "profile": {
+    "memberSince": "Member since {{date}}",
+    "editName": "Edit name",
+    "editEmail": "Edit email",
+    "language": "Language",
+    "notifications": "Notifications",
+    "pushNotifications": "Push notifications",
+    "newCampaignAlerts": "New campaigns",
+    "paymentAlerts": "Payment alerts",
+    "signOut": "Sign out",
+    "deleteAccount": "Delete account",
+    "deleteWarning": "This will permanently delete your account and all associated data. This action cannot be undone.",
+    "changePhoto": "Change photo"
+  }
+}

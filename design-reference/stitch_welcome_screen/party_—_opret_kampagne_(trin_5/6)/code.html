@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="da"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1a355b",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#13181f",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<title>PARTY — Opret Kampagne</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#101419] min-h-screen flex flex-col">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-10 bg-background-light/80 backdrop-blur-md border-b border-gray-200">
+<div class="flex items-center p-4 gap-4">
+<div class="text-primary flex size-10 shrink-0 items-center justify-center cursor-pointer hover:bg-gray-100 rounded-full transition-colors">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</div>
+<h1 class="text-[#101419] text-sm font-bold leading-tight tracking-tight flex-1">PARTY — Opret Kampagne (Trin 5/6)</h1>
+</div>
+<!-- Step Indicator -->
+<div class="flex w-full flex-row items-center justify-center gap-3 pb-4">
+<div class="h-2.5 w-2.5 rounded-full bg-primary/20"></div>
+<div class="h-2.5 w-2.5 rounded-full bg-primary/20"></div>
+<div class="h-2.5 w-2.5 rounded-full bg-primary/20"></div>
+<div class="h-2.5 w-2.5 rounded-full bg-primary/20"></div>
+<div class="h-2.5 w-2.5 rounded-full bg-primary shadow-sm"></div>
+<div class="h-2.5 w-2.5 rounded-full bg-primary/20"></div>
+</div>
+</header>
+<main class="flex-1 flex flex-col max-w-xl mx-auto w-full px-4 pb-32">
+<!-- Headline -->
+<h2 class="text-[#101419] tracking-tight text-3xl font-bold leading-tight pt-8 pb-4">Kontaktoplysninger</h2>
+<!-- Info/Alert Box -->
+<div class="mb-8 @container">
+<div class="flex flex-col gap-3 rounded-xl border border-amber-200 bg-[#FFFBEB] p-5">
+<div class="flex items-center gap-2 text-amber-800">
+<span class="material-symbols-outlined text-[20px]">gavel</span>
+<p class="text-base font-bold leading-tight">Lovkrav</p>
+</div>
+<p class="text-amber-900/80 text-sm font-normal leading-relaxed">
+                    Vi har brug for dine kontaktoplysninger for at overholde gældende lovgivning om kampagnegennemsigtighed. Dine oplysninger behandles fortroligt.
+                </p>
+</div>
+</div>
+<!-- Form Fields -->
+<div class="flex flex-col gap-5">
+<div class="flex flex-col gap-1.5">
+<label class="text-[#101419] text-sm font-semibold ml-1">Fulde navn</label>
+<input class="w-full rounded-xl border border-gray-200 bg-white px-4 py-4 text-[#101419] focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all shadow-sm" type="text" value="Mads Eriksen"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-[#101419] text-sm font-semibold ml-1">Adresse</label>
+<input class="w-full rounded-xl border border-gray-200 bg-white px-4 py-4 text-[#101419] focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all shadow-sm" type="text" value="Strandvejen 102, 2100 København Ø"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-[#101419] text-sm font-semibold ml-1">E-mail</label>
+<input class="w-full rounded-xl border border-gray-200 bg-white px-4 py-4 text-[#101419] focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all shadow-sm" type="email" value="mads.eriksen@example.dk"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-[#101419] text-sm font-semibold ml-1">Telefonnummer</label>
+<input class="w-full rounded-xl border border-gray-200 bg-white px-4 py-4 text-[#101419] focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all shadow-sm" type="tel" value="+45 20 30 40 50"/>
+</div>
+</div>
+</main>
+<!-- Fixed Footer CTA -->
+<footer class="fixed bottom-0 left-0 right-0 p-4 bg-background-light/95 backdrop-blur-sm border-t border-gray-200">
+<div class="max-w-xl mx-auto">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 transition-transform active:scale-[0.98] shadow-lg shadow-primary/20">
+<span class="text-base">Næste</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+</footer>
+</body></html>

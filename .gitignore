@@ -1,0 +1,26 @@
+# macOS
+.DS_Store
+
+# dependencies
+node_modules/
+
+# Expo
+.expo/
+dist/
+web-build/
+
+# Native generated folders
+ios/
+android/
+
+# Environment
+.env
+.env*.local
+
+# Keys
+*.pem
+*.p8
+*.p12
+*.key
+*.jks
+*.mobileprovision

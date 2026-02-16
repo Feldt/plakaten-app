@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html lang="da"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Worker Earnings - Indtjening</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1a355b",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#13181f",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-primary min-h-screen flex flex-col">
+<!-- Header -->
+<header class="sticky top-0 z-10 bg-background-light/80 backdrop-blur-md dark:bg-background-dark/80 px-4 py-4 flex items-center justify-between border-b border-primary/10">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary dark:text-white cursor-pointer">arrow_back</span>
+<h1 class="text-xl font-bold tracking-tight dark:text-white">Indtjening</h1>
+</div>
+<button class="p-2 rounded-full hover:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined text-primary dark:text-white">receipt_long</span>
+</button>
+</header>
+<main class="flex-1 overflow-y-auto px-4 pb-24">
+<!-- Hero Card -->
+<div class="mt-4 @container">
+<div class="bg-primary text-white rounded-xl p-6 shadow-xl relative overflow-hidden">
+<!-- Abstract Pattern Background -->
+<div class="absolute inset-0 opacity-10 pointer-events-none" data-alt="Subtle white dot pattern on navy background" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 24px 24px;"></div>
+<div class="relative z-10">
+<p class="text-white/80 text-sm font-medium mb-1">Samlet indtjening</p>
+<div class="flex items-baseline gap-2">
+<h2 class="text-4xl font-bold tracking-tight">2.475</h2>
+<span class="text-xl font-semibold text-white/90">kr.</span>
+</div>
+<div class="mt-6 pt-6 border-t border-white/10 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-green-400 text-sm">account_balance_wallet</span>
+<span class="text-xs text-white/70">Til udbetaling: 1.200 kr.</span>
+</div>
+<button class="bg-white text-primary text-xs font-bold px-4 py-2 rounded-lg hover:bg-white/90 transition-colors">
+                            Udbetal nu
+                        </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Stats Grid -->
+<div class="grid grid-cols-2 gap-4 mt-4">
+<div class="bg-white dark:bg-primary/10 border border-primary/5 dark:border-primary/20 p-4 rounded-xl shadow-sm">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary dark:text-primary/70 text-lg">description</span>
+<p class="text-xs text-primary/60 dark:text-white/60 font-medium">Plakater</p>
+</div>
+<p class="text-2xl font-bold dark:text-white">165</p>
+</div>
+<div class="bg-white dark:bg-primary/10 border border-primary/5 dark:border-primary/20 p-4 rounded-xl shadow-sm">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary dark:text-primary/70 text-lg">campaign</span>
+<p class="text-xs text-primary/60 dark:text-white/60 font-medium">Kampagner</p>
+</div>
+<p class="text-2xl font-bold dark:text-white">3</p>
+</div>
+</div>
+<!-- Activity List -->
+<div class="mt-8">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-lg font-bold dark:text-white">Seneste aktiviteter</h3>
+<button class="text-primary/60 dark:text-white/60 text-sm font-medium flex items-center gap-1">
+                    Se alle <span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+<div class="space-y-3">
+<!-- Transaction Item 1 -->
+<div class="bg-white dark:bg-primary/5 border border-primary/5 dark:border-primary/20 p-4 rounded-xl flex items-center gap-4 hover:shadow-md transition-shadow">
+<div class="size-12 rounded-lg bg-red-600 flex items-center justify-center text-white font-bold text-xl overflow-hidden shrink-0" data-alt="Red logo for Socialdemokratiet party">
+                        A
+                    </div>
+<div class="flex-1 min-w-0">
+<h4 class="font-bold text-sm truncate dark:text-white">KV25 København</h4>
+<p class="text-xs text-primary/60 dark:text-white/60">Socialdemokratiet</p>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[14px] text-primary/40">calendar_today</span>
+<span class="text-[10px] text-primary/40 dark:text-white/40">12. Okt 2024</span>
+</div>
+</div>
+<div class="text-right shrink-0">
+<p class="font-bold text-sm dark:text-white">675 kr.</p>
+<p class="text-[10px] text-primary/60 dark:text-white/60 mb-1">45 plakater</p>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400">
+                            Betalt
+                        </span>
+</div>
+</div>
+<!-- Transaction Item 2 -->
+<div class="bg-white dark:bg-primary/5 border border-primary/5 dark:border-primary/20 p-4 rounded-xl flex items-center gap-4 hover:shadow-md transition-shadow opacity-90">
+<div class="size-12 rounded-lg bg-blue-600 flex items-center justify-center text-white font-bold text-xl overflow-hidden shrink-0" data-alt="Blue logo for Venstre party">
+                        V
+                    </div>
+<div class="flex-1 min-w-0">
+<h4 class="font-bold text-sm truncate dark:text-white">Regionsvalg Midtjylland</h4>
+<p class="text-xs text-primary/60 dark:text-white/60">Venstre</p>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[14px] text-primary/40">calendar_today</span>
+<span class="text-[10px] text-primary/40 dark:text-white/40">08. Okt 2024</span>
+</div>
+</div>
+<div class="text-right shrink-0">
+<p class="font-bold text-sm dark:text-white">1.200 kr.</p>
+<p class="text-[10px] text-primary/60 dark:text-white/60 mb-1">80 plakater</p>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400">
+                            Betalt
+                        </span>
+</div>
+</div>
+<!-- Transaction Item 3 -->
+<div class="bg-white dark:bg-primary/5 border border-primary/5 dark:border-primary/20 p-4 rounded-xl flex items-center gap-4 hover:shadow-md transition-shadow">
+<div class="size-12 rounded-lg bg-green-600 flex items-center justify-center text-white font-bold text-xl overflow-hidden shrink-0" data-alt="Green logo for SF party">
+                        F
+                    </div>
+<div class="flex-1 min-w-0">
+<h4 class="font-bold text-sm truncate dark:text-white">KV25 Aarhus</h4>
+<p class="text-xs text-primary/60 dark:text-white/60">SF - Socialistisk Folkeparti</p>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[14px] text-primary/40">calendar_today</span>
+<span class="text-[10px] text-primary/40 dark:text-white/40">01. Okt 2024</span>
+</div>
+</div>
+<div class="text-right shrink-0">
+<p class="font-bold text-sm dark:text-white">600 kr.</p>
+<p class="text-[10px] text-primary/60 dark:text-white/60 mb-1">40 plakater</p>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400">
+                            Betalt
+                        </span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white dark:bg-background-dark border-t border-primary/10 px-6 pb-6 pt-3 flex justify-between items-center z-50">
+<a class="flex flex-col items-center gap-1 text-primary/40 dark:text-white/40" href="#">
+<span class="material-symbols-outlined">map</span>
+<span class="text-[10px] font-medium">Kort</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary/40 dark:text-white/40" href="#">
+<span class="material-symbols-outlined">assignment</span>
+<span class="text-[10px] font-medium">Opgaver</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary dark:text-white" href="#">
+<span class="material-symbols-outlined fill">payments</span>
+<span class="text-[10px] font-bold">Indtjening</span>
+<div class="size-1 rounded-full bg-primary dark:bg-white mt-[-2px]"></div>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary/40 dark:text-white/40" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="text-[10px] font-medium">Profil</span>
+</a>
+</nav>
+</body></html>

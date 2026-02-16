@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html lang="da"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PARTY — Kampagnedetaljer (Kort)</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1a355b",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#13181f",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>body {
+    font-family: "Public Sans", sans-serif
+    }
+.glass-overlay {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3)
+    }
+.map-container {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuD6q-MB0a66aWmEPbiJ5SJogaLffYFcyEVz3xxtc7JSGYqu1C8j6MmHrHN8yA7EgPrIEwiNBAknDSgX4IlATnNJ4nLtL6CuNr1LkIA53OSzeNgJbfs0AwrGQuCu7sM4OgTm1ByS3WVchqn23Zhe0Ee1c3iYP4PMsAirv72dDBu2JN9noozuMb1CRgr0TfT7QKwQ2t154Uw67ltUeL4jnCreibNh6A1DMmNr3K3RZK5rV4DFVgc2wc-rPrDqbeS09kjKZgJCYW_f5_4);
+    background-size: cover;
+    background-position: center
+    }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-[#101419] font-display">
+<div class="relative flex h-screen w-full flex-col overflow-hidden">
+<!-- Top Header -->
+<header class="bg-white dark:bg-background-dark border-b border-gray-200 dark:border-gray-800 z-30">
+<div class="flex items-center px-4 py-3 justify-between">
+<div class="flex items-center gap-3">
+<button class="text-primary dark:text-white">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold tracking-tight">Kampagnedetaljer</h1>
+</div>
+<button class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+<!-- Tabs -->
+<nav class="flex px-4 overflow-x-auto">
+<a class="flex flex-col items-center justify-center border-b-2 border-primary text-primary px-4 py-3 shrink-0" href="#">
+<span class="text-sm font-bold">Kort</span>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-gray-500 px-4 py-3 shrink-0" href="#">
+<span class="text-sm font-medium">Hjælpere</span>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-gray-500 px-4 py-3 shrink-0" href="#">
+<span class="text-sm font-medium">Log</span>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-gray-500 px-4 py-3 shrink-0" href="#">
+<span class="text-sm font-medium">Økonomi</span>
+</a>
+</nav>
+</header>
+<!-- Main Map Area -->
+<main class="relative flex-1 map-container overflow-hidden" data-alt="Map showing a city neighborhood with data overlays" data-location="Copenhagen, Denmark">
+<!-- SVG Overlay for Zone Polygon -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" preserveaspectratio="none" viewbox="0 0 100 100">
+<polygon fill="rgba(26, 53, 91, 0.15)" points="20,30 40,25 70,35 85,60 60,80 30,75" stroke="#1a355b" stroke-width="0.5"></polygon>
+</svg>
+<!-- Map UI Elements: Search -->
+<div class="absolute top-4 left-4 right-4 z-20">
+<div class="flex items-center bg-white dark:bg-background-dark rounded-xl shadow-lg px-4 py-2 border border-gray-100 dark:border-gray-800">
+<span class="material-symbols-outlined text-gray-400 mr-2">search</span>
+<input class="w-full bg-transparent border-none focus:ring-0 text-sm" placeholder="Søg i området" type="text"/>
+<span class="material-symbols-outlined text-gray-400">mic</span>
+</div>
+</div>
+<!-- Floating Stats Overlay -->
+<div class="absolute bottom-24 left-4 right-4 z-20">
+<div class="glass-overlay rounded-xl p-4 shadow-xl border border-white/40">
+<div class="flex justify-between items-center mb-3">
+<div class="flex items-center gap-2">
+<span class="text-sm font-bold text-primary">Kampagnestatus</span>
+<span class="bg-green-100 text-green-700 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Aktiv</span>
+</div>
+<span class="text-sm font-bold text-primary">75%</span>
+</div>
+<div class="w-full bg-gray-200/50 rounded-full h-2 mb-2">
+<div class="bg-primary h-2 rounded-full" style="width: 75%"></div>
+</div>
+<div class="flex justify-between items-center text-[11px] text-gray-600 font-medium">
+<span>1.240 / 1.650 husstande</span>
+<span>Slutter om 4 dage</span>
+</div>
+</div>
+</div>
+<!-- Map Pins -->
+<div class="absolute top-[45%] left-[30%]">
+<div class="relative flex flex-col items-center">
+<div class="bg-green-500 text-white p-1 rounded-full shadow-lg border-2 border-white">
+<span class="material-symbols-outlined text-sm block">person</span>
+</div>
+</div>
+</div>
+<div class="absolute top-[60%] left-[65%]">
+<div class="relative flex flex-col items-center">
+<div class="bg-green-500 text-white p-1 rounded-full shadow-lg border-2 border-white">
+<span class="material-symbols-outlined text-sm block">person</span>
+</div>
+</div>
+</div>
+<!-- Active Pin & Callout Bubble -->
+<div class="absolute top-[35%] left-[55%] z-30">
+<div class="relative flex flex-col items-center">
+<!-- Callout -->
+<div class="absolute bottom-10 mb-2 w-56 bg-white dark:bg-background-dark rounded-lg shadow-2xl p-3 border border-gray-100 dark:border-gray-800">
+<div class="flex items-start gap-3">
+<img alt="Profile" class="w-10 h-10 rounded-full object-cover border border-gray-200" data-alt="Close up portrait of a smiling volunteer man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLc6KgoLj7eQ40mRpDrSlBZhk8EAz-SeFxyGy9PRyFG4vKJF7ISny59J5qglUK-0lVxP2wpv5ZojPuEZVBkp6jePbJGlrqe3a96EnSKupoiNYp9NAHr2Y1_nXv5yhWETCa7Zmovylgnlw8eUfNKz-RHLaPuiyYVC8lyPFzbGW3_ZAGraKc0WBYIhoqXpvYwDo0ojVJZKinv7fV7spOSiDGlg4vNN50D9HekEdtpagGuUXEqqKKEPyjJrk1ZOtwNtP7rEEMDuNrR-A"/>
+<div class="flex-1 overflow-hidden">
+<p class="text-[10px] uppercase font-bold text-gray-400 leading-none mb-1">Medlem</p>
+<p class="text-xs font-bold text-primary truncate">Andreas Nielsen</p>
+<p class="text-[10px] text-green-600 font-medium mt-1 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+                                    Uddeler foldere
+                                </p>
+</div>
+<button class="text-gray-300">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+<div class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white dark:bg-background-dark rotate-45 border-r border-b border-gray-100 dark:border-gray-800"></div>
+</div>
+<!-- The Pin -->
+<div class="bg-primary text-white p-1.5 rounded-full shadow-lg border-2 border-white ring-4 ring-primary/20">
+<span class="material-symbols-outlined text-base block">person</span>
+</div>
+</div>
+</div>
+<!-- Map Controls -->
+<div class="absolute right-4 top-20 flex flex-col gap-2 z-20">
+<button class="w-10 h-10 bg-white dark:bg-background-dark rounded-lg shadow-md flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">add</span>
+</button>
+<button class="w-10 h-10 bg-white dark:bg-background-dark rounded-lg shadow-md flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">remove</span>
+</button>
+<button class="w-10 h-10 bg-white dark:bg-background-dark rounded-lg shadow-md flex items-center justify-center text-primary mt-2">
+<span class="material-symbols-outlined">my_location</span>
+</button>
+<button class="w-10 h-10 bg-white dark:bg-background-dark rounded-lg shadow-md flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">layers</span>
+</button>
+</div>
+</main>
+<!-- Bottom Tab Bar -->
+<footer class="bg-white dark:bg-background-dark border-t border-gray-200 dark:border-gray-800 px-4 py-2 z-30">
+<div class="flex justify-around items-end">
+<a class="flex flex-col items-center gap-1 text-gray-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Hjem</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">flag</span>
+<span class="text-[10px] font-bold">Kampagner</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-400" href="#">
+<span class="material-symbols-outlined">map</span>
+<span class="text-[10px] font-medium">Kort</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-400" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="text-[10px] font-medium">Profil</span>
+</a>
+</div>
+</footer>
+</div>
+</body></html>

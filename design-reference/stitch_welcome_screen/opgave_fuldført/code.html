@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="da"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1a355b",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#13181f",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Opgave Fuldført</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-primary antialiased">
+<!-- Main Map Background Container -->
+<div class="relative flex h-screen w-full flex-col overflow-hidden">
+<!-- Underlying Map UI (Blurred) -->
+<div class="absolute inset-0 z-0 filter blur-sm grayscale-[0.2]">
+<div class="relative flex h-full w-full flex-col bg-gray-100">
+<div class="flex-1 bg-cover bg-center" data-alt="City map with various pins and task markers" data-location="Copenhagen, Denmark" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBqB_HVlK7GpHeYMUbWe0g12qA9l0RxdkDai8wCna9Spaoru0pDjAWVRGhuO80BAcMTJSFKsffFwgi12gb-j4UH8gV4LoD3LeAuG7wfAWCGng2ZHNVCV8lYttY7D4CuHbjx2TSvYFABI8xBXwfQRU1Me70ZmXVQ1tZMs9m6C_F8vokVrUs91z12L2QUnorLlO5Oy0RWIptqro3XncifWxccIFDf8P-BcVVW3EznwKVtzi2fUZZNmVdgACLP7bcGIp3222jthmDhD4U");'>
+<!-- Search Bar in Background -->
+<div class="p-4 @container">
+<div class="flex w-full items-stretch rounded-xl h-12 bg-white shadow-md">
+<div class="text-gray-400 flex items-center justify-center pl-4">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full border-none bg-transparent focus:ring-0 text-base" disabled="" placeholder="Søg efter opgaver"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Full Screen Celebration Overlay -->
+<div class="absolute inset-0 z-10 flex items-center justify-center bg-primary/20 backdrop-blur-md p-4">
+<!-- Confetti Effect (Visual via CSS Gradients/Shapes) -->
+<div class="absolute inset-0 pointer-events-none overflow-hidden">
+<div class="absolute top-10 left-1/4 w-3 h-3 bg-yellow-400 rounded-full opacity-60"></div>
+<div class="absolute top-20 right-1/3 w-2 h-4 bg-blue-400 rotate-45 opacity-60"></div>
+<div class="absolute bottom-1/4 left-10 w-4 h-2 bg-red-400 -rotate-12 opacity-60"></div>
+<div class="absolute top-1/2 right-10 w-3 h-3 bg-green-400 rounded-sm rotate-12 opacity-60"></div>
+<div class="absolute bottom-20 right-1/4 w-2 h-2 bg-purple-400 rounded-full opacity-60"></div>
+</div>
+<!-- Success Card -->
+<div class="relative w-full max-w-md bg-white dark:bg-background-dark rounded-xl shadow-2xl p-8 flex flex-col items-center text-center">
+<!-- Large Green Checkmark -->
+<div class="mb-6 flex items-center justify-center w-24 h-24 bg-green-100 rounded-full">
+<span class="material-symbols-outlined text-green-600 !text-6xl font-bold">check_circle</span>
+</div>
+<!-- Heading -->
+<h1 class="text-3xl font-bold text-primary dark:text-white mb-2 tracking-tight">Tillykke!</h1>
+<!-- Body Text -->
+<p class="text-gray-600 dark:text-gray-400 text-lg mb-8">
+                    Du har hængt alle <span class="font-semibold text-primary dark:text-gray-200">25 plakater</span> op!
+                </p>
+<!-- Earnings Highlight -->
+<div class="mb-10 p-4 bg-primary/5 dark:bg-primary/20 rounded-lg border border-primary/10 w-full">
+<span class="block text-sm uppercase tracking-wider text-primary/60 dark:text-primary/40 font-bold mb-1">Din belønning</span>
+<h2 class="text-4xl font-extrabold text-primary dark:text-white">375 kr. optjent</h2>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col w-full gap-4">
+<!-- Primary Button -->
+<button class="bg-primary hover:bg-primary/90 text-white font-bold py-4 px-8 rounded-lg transition-all shadow-lg active:scale-[0.98]">
+                        Se dine indtægter
+                    </button>
+<!-- Secondary Link -->
+<button class="text-primary/70 dark:text-gray-400 font-medium py-2 hover:text-primary dark:hover:text-white transition-colors">
+                        Tilbage til opgaver
+                    </button>
+</div>
+<!-- Pull Down Handle Visual -->
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 w-12 h-1.5 bg-white/20 rounded-full hidden"></div>
+</div>
+</div>
+<!-- Floating Action Buttons (Visual only, behind overlay) -->
+<div class="absolute right-4 bottom-24 flex flex-col gap-2 z-0 opacity-20">
+<button class="w-12 h-12 bg-white rounded-lg shadow flex items-center justify-center">
+<span class="material-symbols-outlined">add</span>
+</button>
+<button class="w-12 h-12 bg-white rounded-lg shadow flex items-center justify-center">
+<span class="material-symbols-outlined">remove</span>
+</button>
+<button class="w-12 h-12 bg-white rounded-lg shadow mt-2 flex items-center justify-center">
+<span class="material-symbols-outlined">my_location</span>
+</button>
+</div>
+</div>
+</body></html>
