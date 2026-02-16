@@ -47,6 +47,11 @@ export const phoneLoginSchema = z.object({
   phone: z.string().regex(/^[2-9]\d{7}$/, 'Ugyldigt dansk telefonnummer (8 cifre)'),
 });
 
+export const emailLoginSchema = z.object({
+  email: z.string().email('Ugyldig email-adresse'),
+  password: z.string().min(1, 'Adgangskode er påkrævet'),
+});
+
 // Campaign creation step schemas
 export const campaignBasicSchema = z.object({
   title: z.string().min(3, 'Titel skal være mindst 3 tegn'),
@@ -95,3 +100,4 @@ export type CampaignContactFormData = z.infer<typeof campaignContactSchema>;
 export type WorkerRegistrationFormData = z.infer<typeof workerRegistrationSchema>;
 export type PartyRegistrationFormData = z.infer<typeof partyRegistrationSchema>;
 export type PhoneLoginFormData = z.infer<typeof phoneLoginSchema>;
+export type EmailLoginFormData = z.infer<typeof emailLoginSchema>;
